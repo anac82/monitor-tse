@@ -191,6 +191,86 @@ def calcular_flags(df: pd.DataFrame) -> pd.DataFrame:
         df["flag_abrangencia_br"]
     )
 
+    # ── status (campo único com hierarquia de classificação) ───────────────────
+    #
+    # Hierarquia (do mais para o menos restritivo):
+    #
+    #   1  APROVADA — nacional confirmada        → texto confirma abrangência BR
+    #   2  APROVADA — nacional presumida         → sem padrão contrário + n≥1500
+    #   3  EXCLUÍDA — pesquisa estadual          → texto confirma abrangência estadual
+    #   4  EXCLUÍDA — pesquisa municipal/bairro  → texto menciona bairros/cidade única
+    #   5  EXCLUÍDA — amostra insuficiente       → n < 1000 (mas seria nacional)
+    #   6  EXCLUÍDA — abrangência inconclusiva   → sem padrão + n < 1500
+    #
+    # Quando há múltiplos motivos, o de maior hierarquia prevalece no label,
+    # mas todos os motivos aparecem concatenados após " + ".
+
+    def _status(row):
+        uf_ok  = row["flag_nacional"]
+        amo_ok = row["flag_amostra_ok"]
+        abr_ok = row["flag_abrangencia_br"]
+        nac    = row["_abrang_confirmado_nacional"]
+        nao    = row["_abrang_confirmado_nao_nacional"]
+        sem    = row["_abrang_sem_padrao"]
+        n      = int(row["QT_ENTREVISTADO"]) if pd.notna(row["QT_ENTREVISTADO"]) else 0
+
+        # ── APROVADAS ──────────────────────────────────────────────────────────
+        if uf_ok and amo_ok and abr_ok:
+            if nac:
+                return "1_APROVADA — nacional confirmada"
+            else:
+                return "2_APROVADA — nacional presumida (n≥1500)"
+
+        # ── EXCLUÍDAS — montar motivos ────────────────────────────────────────
+        motivos = []
+
+        # Motivo de abrangência (hierarquia: estadual > municipal > inconclusivo)
+        if not abr_ok:
+            if nao:
+                # Distinguir estadual de municipal pelo texto
+                txt = str(row.get("DS_DADO_MUNICIPIO", "")).lower() + \
+                      str(row.get("DS_METODOLOGIA_PESQUISA", "")).lower()
+                if any(p in txt for p in ["bairros:", "bairros pesquisados",
+                                          "zona urbana centro", "município de "]):
+                    motivos.append("pesquisa municipal/bairro")
+                else:
+                    motivos.append("pesquisa estadual")
+            elif sem:
+                motivos.append(f"abrangência inconclusiva (n={n})")
+
+        # Motivo de amostra
+        if not amo_ok:
+            motivos.append(f"amostra insuficiente (n={n})")
+
+        # Motivo de UF (raro — mantido por segurança)
+        if not uf_ok:
+            motivos.append("UF≠BR")
+
+        if not motivos:
+            motivos.append("motivo indeterminado")
+
+        # Determinar prefixo numérico pelo motivo principal
+        if "pesquisa estadual" in motivos[0]:
+            prefixo = "3"
+        elif "pesquisa municipal" in motivos[0]:
+            prefixo = "4"
+        elif "amostra insuficiente" in motivos[0]:
+            prefixo = "5"
+        else:
+            prefixo = "6"
+
+        return f"{prefixo}_EXCLUÍDA — {' + '.join(motivos)}"
+
+    # Precisamos dos campos de texto para _status — garantir que existem
+    for col in ["DS_DADO_MUNICIPIO", "DS_METODOLOGIA_PESQUISA"]:
+        if col not in df.columns:
+            df[col] = ""
+
+    df["status"] = df.apply(_status, axis=1)
+
+    # Versão legível sem o prefixo numérico (para exibição)
+    df["status_label"] = df["status"].str.replace(r"^\d_", "", regex=True)
+
     return df
 
 
@@ -235,9 +315,12 @@ COLUNAS = [
     "NR_PROTOCOLO_REGISTRO", "instituto", "tse_registro",
     "campo_inicio", "campo_fim", "campo_dias", "divulgacao",
     "QT_ENTREVISTADO", "custo_reais", "metodologia", "pesquisa_propria",
-    "flag_nacional", "flag_amostra_ok", "flag_abrangencia_br",
-    "flag_instituto_ativo", "usa_no_agregador",
-    # auditoria de abrangência
+    # classificação principal
+    "status",          # ex: "3_EXCLUÍDA — pesquisa estadual"
+    "status_label",    # ex: "EXCLUÍDA — pesquisa estadual"
+    "usa_no_agregador",
+    # flags individuais (para auditoria)
+    "flag_nacional", "flag_amostra_ok", "flag_abrangencia_br", "flag_instituto_ativo",
     "_abrang_confirmado_nacional", "_abrang_confirmado_nao_nacional", "_abrang_sem_padrao",
 ]
 
@@ -321,22 +404,24 @@ def gerar_relatorio(df: pd.DataFrame, novas: pd.DataFrame) -> None:
     L.append(f"| Novas detectadas hoje | **{len(novas)}** |")
     L.append("")
 
-    # Flags
-    L.append("## 🏷️ Distribuição dos flags")
+    # Distribuição por status
+    L.append("## 🏷️ Classificação das pesquisas")
     L.append("")
-    L.append("| Flag | Verdadeiro | Falso | Significado |")
-    L.append("|------|-----------|-------|-------------|")
-    infos = {
-        "flag_nacional":        "UF=BR (registro nacional)",
-        "flag_amostra_ok":      "n ≥ 1.000 entrevistados",
-        "flag_abrangencia_br":  "aplicada em múltiplos estados/regiões",
-        "flag_instituto_ativo": "instituto na lista de referência",
-        "usa_no_agregador":     "recomendada para o agregador",
+    L.append("| # | Status | Quantidade |")
+    L.append("|---|--------|-----------|")
+    labels = {
+        "1_APROVADA — nacional confirmada":       "✅ Aprovada — nacional confirmada",
+        "2_APROVADA — nacional presumida (n≥1500)":"✅ Aprovada — nacional presumida (n≥1500)",
+        "3_EXCLUÍDA — pesquisa estadual":          "❌ Excluída — pesquisa estadual",
+        "4_EXCLUÍDA — pesquisa municipal/bairro":  "❌ Excluída — pesquisa municipal/bairro",
+        "5_EXCLUÍDA — amostra insuficiente":       "❌ Excluída — amostra insuficiente",
+        "6_EXCLUÍDA — abrangência inconclusiva":   "⚠️ Excluída — abrangência inconclusiva",
     }
-    for flag, desc in infos.items():
-        v = int(df[flag].sum())
-        f = len(df) - v
-        L.append(f"| `{flag}` | {v} | {f} | {desc} |")
+    contagens = df["status"].str.extract(r"^(\d)")[0].value_counts().sort_index()
+    for prefixo, label in labels.items():
+        chave = prefixo[0]
+        count = int(contagens.get(chave, 0))
+        L.append(f"| {chave} | {label} | {count} |")
     L.append("")
 
     # Novas
