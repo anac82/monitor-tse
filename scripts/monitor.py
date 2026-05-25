@@ -1,14 +1,15 @@
 """
 monitor.py — Agente diário de monitoramento de pesquisas presidenciais no TSE.
-Executa via GitHub Actions todo dia às 09h Brasília.
+
+Filosofia:
+    Guarda TUDO com cargo=Presidente. Nenhuma linha é descartada.
+    Flags indicam qualidade — a decisão de usar fica no campo usa_no_agregador.
+    Veja CRITERIOS.md para a documentação completa de cada flag.
 """
 
-import hashlib
 import io
 import json
 import logging
-import os
-import re
 import sys
 import zipfile
 from datetime import date, datetime
@@ -19,55 +20,88 @@ import requests
 
 # ─── Configuração ──────────────────────────────────────────────────────────────
 
-URL_TSE = (
-    "https://cdn.tse.jus.br/estatistica/sead/odsele/"
-    "pesquisa_eleitoral/pesquisa_eleitoral_2026.zip"
-)
+URL_TSE        = ("https://cdn.tse.jus.br/estatistica/sead/odsele/"
+                  "pesquisa_eleitoral/pesquisa_eleitoral_2026.zip")
 ARQUIVO_BRASIL = "pesquisa_eleitoral_2026_BRASIL.csv"
 
-ROOT     = Path(__file__).parent.parent
-DATA_DIR = ROOT / "data"
+ROOT          = Path(__file__).parent.parent
+DATA_DIR      = ROOT / "data"
 DATA_DIR.mkdir(exist_ok=True)
-
 HISTORICO_CSV = DATA_DIR / "historico.csv"
 HOJE          = date.today()
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s  %(message)s",
-    handlers=[logging.StreamHandler(sys.stdout)],
-)
+logging.basicConfig(level=logging.INFO,
+                    format="%(asctime)s  %(message)s",
+                    handlers=[logging.StreamHandler(sys.stdout)])
 log = logging.getLogger(__name__)
 
-# ─── Filtros ───────────────────────────────────────────────────────────────────
+# ─── Referências para os flags ────────────────────────────────────────────────
 #
-# Com base na análise do CSV do TSE (25/05/2026):
-#
-#   DS_CARGO == 'Presidente'     → apenas cargo presidencial
-#   SG_UF    == 'BR'             → registro nacional, não estadual
-#   QT_ENTREVISTADO >= 1000      → amostra mínima aceitável
-#   DS_DADO_MUNICIPIO            → excluir pesquisas de bairro/cidade única
+# Baseado na análise de 296 pesquisas presidenciais do TSE em 25/05/2026.
+# Veja CRITERIOS.md para a documentação completa.
 
-PALAVRAS_EXCLUIR_MUNICIPIO = [
-    r"\bbairr",
-    r"zona urbana",
-    r"município de ",
-    r"cidade de ",
-    r"\bzona rural\b",
+# flag_abrangencia_br = FALSE quando qualquer um destes padrões aparece
+# nos campos DS_METODOLOGIA_PESQUISA + DS_PLANO_AMOSTRAL + DS_DADO_MUNICIPIO
+PADROES_PESQUISA_NAO_NACIONAL = [
+    # Pesquisas de bairro explícitas
+    r"\bbairros?:",
+    r"\bbairros? pesquisados",
+    r"zona urbana centro",
+    r"zona urbana.*zona rural",
+    # Pesquisas de cidade/município único
+    r"município de [a-záàâãéèêíïóôõöúüç]",
+    r"cidade de [a-záàâãéèêíïóôõöúüç]",
+    r"municípios do município",
+    r"eleitores? do município",
+    # Pesquisas estaduais disfarçadas de nacionais
+    r"eleitorado (do|da|de) estado (do|da|de) [a-z]",
+    r"eleitorado desta unidade da federação",
+    r"eleitorado do estado",
+    r"pesquisa.*estado (do|da) [a-z]",
+    r"área.*estado (do|da) [a-z]",
+    r"abrangência.*estado",
+    r"coleta.*estado (do|da) [a-z]",
+    r"universo.*estado (do|da) [a-z]",
+    r"eleitores? do estado",
+    r"(realizada?|realizado?) no estado",
 ]
 
-INSTITUTOS_CONHECIDOS = [
+# Padrões que CONFIRMAM pesquisa nacional
+PADROES_NACIONAL = [
+    r"eleitorado brasileiro",
+    r"todo o país",
+    r"todo o brasil",
+    r"26 estados",
+    r"cinco regiões do brasil",
+    r"5.*regiões do brasil",
+    r"regiões do brasil",
+    r"abrangência.*(é )?nacional",
+    r"coleta é nacional",
+    r"universo.*brasil",
+    r"estratificad.* (por |pelas? )(grandes? )?regiões",
+    r"amostra.*representativa.*eleitorado.*brasil",
+]
+
+# Institutos que já divulgaram pesquisas presidenciais nacionais publicamente
+INSTITUTOS_ATIVOS = {
     "QUAEST", "DATAFOLHA", "ATLASINTEL", "ATLAS INTEL",
-    "PARANA PESQUISAS", "REAL TIME", "FUTURA", "NEXUS", "FSB",
-    "MDA", "GERP", "IDEIA", "VERITA", "IPEC", "IPESPE",
-    "PODERDATA", "RANKING BRASIL", "100 CIDADES", "BOAS IDEIAS",
-    "JOTA", "ANOVA", "NEOKEMP", "DOXA", "ECONOMETRICA",
-]
+    "PARANA PESQUISAS", "REAL TIME BIG DATA",
+    "FUTURA", "FUTURA INTELIGENCIA",
+    "NEXUS", "FSB", "MDA",
+    "GERP", "GRUPO GERP",
+    "IDEIA", "BOAS IDEIAS",
+    "PODERDATA", "PODER DATA",
+    "100 CIDADES",
+    "JOTA", "JOTA JORNALISMO",
+    "DATA POVO",
+    "INDEXA",
+}
+
 
 # ─── 1. Download ───────────────────────────────────────────────────────────────
 
 def baixar() -> pd.DataFrame:
-    log.info(f"Baixando ZIP do TSE...")
+    log.info("Baixando ZIP do TSE...")
     r = requests.get(URL_TSE, timeout=60)
     r.raise_for_status()
     with zipfile.ZipFile(io.BytesIO(r.content)) as zf:
@@ -76,258 +110,305 @@ def baixar() -> pd.DataFrame:
     log.info(f"  {len(df)} registros totais")
     return df
 
-# ─── 2. Filtrar pesquisas presidenciais nacionais ──────────────────────────────
 
-def filtrar(df: pd.DataFrame) -> pd.DataFrame:
-    # Cargo = Presidente
-    mask = df["DS_CARGO"] == "Presidente"
-    # UF nacional
-    mask &= df["SG_UF"] == "BR"
-    # Amostra mínima
+# ─── 2. Filtrar só cargo Presidente ───────────────────────────────────────────
+
+def filtrar_cargo(df: pd.DataFrame) -> pd.DataFrame:
+    pres = df[df["DS_CARGO"] == "Presidente"].copy()
+    log.info(f"  {len(pres)} pesquisas com cargo=Presidente")
+    return pres
+
+
+# ─── 3. Calcular flags ────────────────────────────────────────────────────────
+
+def _texto_metodologia(df: pd.DataFrame) -> pd.Series:
+    """Concatena os 3 campos de texto relevantes em minúsculas."""
+    return (
+        df["DS_METODOLOGIA_PESQUISA"].fillna("") + " " +
+        df["DS_PLANO_AMOSTRAL"].fillna("") + " " +
+        df["DS_DADO_MUNICIPIO"].fillna("")
+    ).str.lower()
+
+
+def calcular_flags(df: pd.DataFrame) -> pd.DataFrame:
+    df = df.copy()
+    texto = _texto_metodologia(df)
+
+    # ── flag_nacional ──────────────────────────────────────────────────────────
+    # Todas com DS_CARGO=Presidente têm SG_UF=BR no TSE — mantemos por segurança
+    df["flag_nacional"] = df["SG_UF"] == "BR"
+
+    # ── flag_amostra_ok ────────────────────────────────────────────────────────
+    # Amostra mínima de 1.000 exclui pesquisas municipais e pilotos.
+    # Veja CRITERIOS.md seção Flag 2 para justificativa.
     qt = pd.to_numeric(df["QT_ENTREVISTADO"], errors="coerce").fillna(0)
-    mask &= qt >= 1000
-    # Sem pesquisas de bairro/cidade
-    mun = df["DS_DADO_MUNICIPIO"].fillna("").str.lower()
-    for p in PALAVRAS_EXCLUIR_MUNICIPIO:
-        mask &= ~mun.str.contains(p, regex=True, na=False)
+    df["flag_amostra_ok"] = qt >= 1000
 
-    resultado = df[mask].copy()
-    log.info(f"  {len(resultado)} pesquisas presidenciais nacionais após filtros")
-    return resultado
+    # ── flag_abrangencia_br ────────────────────────────────────────────────────
+    # Verifica nos campos de texto se a pesquisa foi aplicada
+    # em múltiplos estados/regiões do Brasil.
+    # Abordagem em 3 camadas:
+    #   1. Presença de padrão nacional → True
+    #   2. Presença de padrão não-nacional → False
+    #   3. Sem padrão claro → True (benefício da dúvida para pesquisas com n>=1500)
 
-# ─── 3. Enriquecer ─────────────────────────────────────────────────────────────
+    tem_nacional    = pd.Series(False, index=df.index)
+    tem_nao_nacional = pd.Series(False, index=df.index)
+
+    for p in PADROES_NACIONAL:
+        tem_nacional |= texto.str.contains(p, regex=True, na=False)
+
+    for p in PADROES_PESQUISA_NAO_NACIONAL:
+        tem_nao_nacional |= texto.str.contains(p, regex=True, na=False)
+
+    # Nacional confirmado: tem padrão nacional E não tem padrão estadual/municipal
+    confirmado_nacional = tem_nacional & ~tem_nao_nacional
+
+    # Estadual/municipal confirmado: tem padrão não-nacional
+    confirmado_nao_nacional = tem_nao_nacional
+
+    # Sem padrão claro: benefício da dúvida para amostras grandes (>=1.500)
+    sem_padrao = ~tem_nacional & ~tem_nao_nacional
+    grande     = qt >= 1500
+    df["flag_abrangencia_br"] = confirmado_nacional | (sem_padrao & grande)
+
+    # Detalhamento para auditoria
+    df["_abrang_confirmado_nacional"]     = confirmado_nacional
+    df["_abrang_confirmado_nao_nacional"] = confirmado_nao_nacional
+    df["_abrang_sem_padrao"]              = sem_padrao
+
+    # ── flag_instituto_ativo ───────────────────────────────────────────────────
+    # Informativo — não bloqueia usa_no_agregador.
+    inst = df["NM_EMPRESA_FANTASIA"].fillna(df["NM_EMPRESA"]).str.upper().fillna("")
+    df["flag_instituto_ativo"] = inst.apply(
+        lambda x: any(k in x for k in INSTITUTOS_ATIVOS)
+    )
+
+    # ── usa_no_agregador ───────────────────────────────────────────────────────
+    df["usa_no_agregador"] = (
+        df["flag_nacional"] &
+        df["flag_amostra_ok"] &
+        df["flag_abrangencia_br"]
+    )
+
+    return df
+
+
+# ─── 4. Enriquecer ────────────────────────────────────────────────────────────
 
 def enriquecer(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
 
-    # Custo numérico
-    df["custo"] = pd.to_numeric(
+    df["custo_reais"] = pd.to_numeric(
         df["VR_PESQUISA"].astype(str).str.replace(",", "."), errors="coerce"
     )
 
-    # Datas
-    for col_orig, col_novo in [
+    for orig, novo in [
         ("DT_INICIO_PESQUISA", "campo_inicio"),
         ("DT_FIM_PESQUISA",    "campo_fim"),
         ("DT_DIVULGACAO",      "divulgacao"),
-        ("DT_REGISTRO",        "registro"),
+        ("DT_REGISTRO",        "tse_registro"),
     ]:
-        df[col_novo] = pd.to_datetime(df[col_orig], errors="coerce").dt.date
+        df[novo] = pd.to_datetime(df[orig], errors="coerce").dt.date
 
-    # Duração do campo
-    df["duracao_dias"] = (
+    df["campo_dias"] = (
         pd.to_datetime(df["DT_FIM_PESQUISA"]) -
         pd.to_datetime(df["DT_INICIO_PESQUISA"])
     ).dt.days
 
-    # Instituto (nome fantasia ou razão social)
-    df["instituto"] = (
-        df["NM_EMPRESA_FANTASIA"].fillna(df["NM_EMPRESA"]).str.strip()
-    )
+    df["instituto"] = df["NM_EMPRESA_FANTASIA"].fillna(df["NM_EMPRESA"]).str.strip()
 
-    # Metodologia resumida
     m = df["DS_METODOLOGIA_PESQUISA"].fillna("").str.lower()
     df["metodologia"] = "presencial"
-    df.loc[m.str.contains(r"telefon|cati|capi",              regex=True), "metodologia"] = "telefone"
+    df.loc[m.str.contains(r"telefon|cati|capi",                         regex=True), "metodologia"] = "telefone"
     df.loc[m.str.contains(r"online|web|internet|eletrônico|formulário", regex=True), "metodologia"] = "online"
-    df.loc[m.str.contains(r"ura|robocall|automatiz",         regex=True), "metodologia"] = "URA"
+    df.loc[m.str.contains(r"ura|robocall|automatiz",                    regex=True), "metodologia"] = "URA"
 
-    # Instituto conhecido?
-    up = df["instituto"].str.upper().fillna("")
-    df["conhecido"] = up.apply(
-        lambda x: any(k in x for k in INSTITUTOS_CONHECIDOS)
-    )
-
-    # Pesquisa própria?
-    df["propria"] = df["ST_PESQUISA_PROPRIA"] == "S"
+    df["pesquisa_propria"] = df["ST_PESQUISA_PROPRIA"] == "S"
 
     return df
 
-# ─── 4. Colunas do histórico ────────────────────────────────────────────────────
+
+# ─── 5. Colunas do histórico ──────────────────────────────────────────────────
 
 COLUNAS = [
-    "NR_PROTOCOLO_REGISTRO",
-    "instituto",
-    "registro",
-    "campo_inicio",
-    "campo_fim",
-    "divulgacao",
-    "QT_ENTREVISTADO",
-    "custo",
-    "metodologia",
-    "duracao_dias",
-    "propria",
-    "conhecido",
+    "NR_PROTOCOLO_REGISTRO", "instituto", "tse_registro",
+    "campo_inicio", "campo_fim", "campo_dias", "divulgacao",
+    "QT_ENTREVISTADO", "custo_reais", "metodologia", "pesquisa_propria",
+    "flag_nacional", "flag_amostra_ok", "flag_abrangencia_br",
+    "flag_instituto_ativo", "usa_no_agregador",
+    # auditoria de abrangência
+    "_abrang_confirmado_nacional", "_abrang_confirmado_nao_nacional", "_abrang_sem_padrao",
 ]
 
-# ─── 5. Detectar novas ─────────────────────────────────────────────────────────
+
+# ─── 6. Detectar novas ────────────────────────────────────────────────────────
 
 def protocolos_vistos() -> set:
     if not HISTORICO_CSV.exists():
         return set()
-    df = pd.read_csv(HISTORICO_CSV, usecols=["NR_PROTOCOLO_REGISTRO"])
-    return set(df["NR_PROTOCOLO_REGISTRO"].astype(str))
+    return set(pd.read_csv(HISTORICO_CSV,
+                           usecols=["NR_PROTOCOLO_REGISTRO"])
+               ["NR_PROTOCOLO_REGISTRO"].astype(str))
+
 
 def detectar_novas(df: pd.DataFrame, vistos: set) -> pd.DataFrame:
-    mask = ~df["NR_PROTOCOLO_REGISTRO"].astype(str).isin(vistos)
-    novas = df[mask].copy()
-    log.info(f"  {len(novas)} pesquisas NOVAS detectadas")
+    novas = df[~df["NR_PROTOCOLO_REGISTRO"].astype(str).isin(vistos)].copy()
+    log.info(f"  {len(novas)} pesquisas NOVAS (já vistas: {len(vistos)})")
     return novas
 
+
 def atualizar_historico(df: pd.DataFrame) -> None:
+    novo = df[COLUNAS].copy()
     if HISTORICO_CSV.exists():
         existente = pd.read_csv(HISTORICO_CSV)
-        combinado = pd.concat([existente, df[COLUNAS]], ignore_index=True)
-        combinado = combinado.drop_duplicates(subset=["NR_PROTOCOLO_REGISTRO"])
+        combinado = pd.concat([existente, novo], ignore_index=True)
+        # keep="first" preserva edições manuais de usa_no_agregador
+        combinado = combinado.drop_duplicates("NR_PROTOCOLO_REGISTRO", keep="first")
     else:
-        combinado = df[COLUNAS].copy()
+        combinado = novo
     combinado.to_csv(HISTORICO_CSV, index=False, encoding="utf-8")
-    log.info(f"  Histórico: {len(combinado)} pesquisas totais")
+    log.info(f"  Histórico: {len(combinado)} pesquisas")
 
-# ─── 6. Snapshot diário ────────────────────────────────────────────────────────
+
+# ─── 7. Snapshot e JSON ───────────────────────────────────────────────────────
 
 def salvar_snapshot(df: pd.DataFrame) -> None:
-    caminho = DATA_DIR / f"snapshot_{HOJE}.csv"
-    df[COLUNAS].to_csv(caminho, index=False, encoding="utf-8")
-    log.info(f"  Snapshot salvo: {caminho.name}")
+    p = DATA_DIR / f"snapshot_{HOJE}.csv"
+    df[COLUNAS].to_csv(p, index=False, encoding="utf-8")
+    log.info(f"  Snapshot: {p.name}")
 
-# ─── 7. JSON de novas (lido pelo workflow para criar a Issue) ──────────────────
 
 def salvar_json(novas: pd.DataFrame) -> Path:
     registros = []
-    for _, r in novas.sort_values("registro", ascending=False).iterrows():
+    for _, r in novas.sort_values("tse_registro", ascending=False).iterrows():
         registros.append({
-            "protocolo":   str(r["NR_PROTOCOLO_REGISTRO"]),
-            "instituto":   str(r["instituto"]),
-            "registro":    str(r["registro"]),
-            "campo_inicio": str(r["campo_inicio"]),
-            "campo_fim":   str(r["campo_fim"]),
-            "divulgacao":  str(r["divulgacao"]),
-            "amostra":     int(r["QT_ENTREVISTADO"]) if pd.notna(r["QT_ENTREVISTADO"]) else None,
-            "custo":       float(r["custo"]) if pd.notna(r["custo"]) else None,
-            "metodologia": str(r["metodologia"]),
-            "conhecido":   bool(r["conhecido"]),
+            "protocolo":                  str(r["NR_PROTOCOLO_REGISTRO"]),
+            "instituto":                  str(r["instituto"]),
+            "tse_registro":               str(r["tse_registro"]),
+            "campo_inicio":               str(r["campo_inicio"]),
+            "campo_fim":                  str(r["campo_fim"]),
+            "divulgacao":                 str(r["divulgacao"]),
+            "amostra":                    int(r["QT_ENTREVISTADO"]) if pd.notna(r["QT_ENTREVISTADO"]) else None,
+            "custo_reais":                float(r["custo_reais"]) if pd.notna(r["custo_reais"]) else None,
+            "metodologia":                str(r["metodologia"]),
+            "flag_nacional":              bool(r["flag_nacional"]),
+            "flag_amostra_ok":            bool(r["flag_amostra_ok"]),
+            "flag_abrangencia_br":        bool(r["flag_abrangencia_br"]),
+            "flag_instituto_ativo":       bool(r["flag_instituto_ativo"]),
+            "abrang_confirmado_nacional": bool(r["_abrang_confirmado_nacional"]),
+            "abrang_nao_nacional":        bool(r["_abrang_confirmado_nao_nacional"]),
+            "usa_no_agregador":           bool(r["usa_no_agregador"]),
         })
 
-    payload = {
-        "data":   str(HOJE),
-        "total":  len(novas),
-        "novas":  registros,
-    }
+    payload = {"data": str(HOJE), "total": len(novas), "novas": registros}
+    p = DATA_DIR / f"novas_{HOJE}.json"
+    p.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    log.info(f"  JSON: {p.name}")
+    return p
 
-    caminho = DATA_DIR / f"novas_{HOJE}.json"
-    caminho.write_text(
-        json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
-    log.info(f"  JSON salvo: {caminho.name}")
-    return caminho
 
-# ─── 8. Relatório Markdown ─────────────────────────────────────────────────────
+# ─── 8. Relatório Markdown ────────────────────────────────────────────────────
 
 def gerar_relatorio(df: pd.DataFrame, novas: pd.DataFrame) -> None:
-    linhas = []
-    linhas.append(f"# Monitoramento TSE — {HOJE.strftime('%d/%m/%Y')}")
-    linhas.append(f"")
-    linhas.append(f"| | |")
-    linhas.append(f"|---|---|")
-    linhas.append(f"| Total de pesquisas presidenciais nacionais | **{len(df)}** |")
-    linhas.append(f"| Pesquisas novas hoje | **{len(novas)}** |")
-    linhas.append(f"")
+    L = []
+    L.append(f"# Monitor TSE — {HOJE.strftime('%d/%m/%Y')}")
+    L.append("")
+    L.append("| | |")
+    L.append("|---|---|")
+    L.append(f"| Total registradas (cargo=Presidente) | **{len(df)}** |")
+    L.append(f"| Recomendadas para o agregador (`usa_no_agregador=True`) | **{int(df['usa_no_agregador'].sum())}** |")
+    L.append(f"| Novas detectadas hoje | **{len(novas)}** |")
+    L.append("")
 
-    # Novas pesquisas
+    # Flags
+    L.append("## 🏷️ Distribuição dos flags")
+    L.append("")
+    L.append("| Flag | Verdadeiro | Falso | Significado |")
+    L.append("|------|-----------|-------|-------------|")
+    infos = {
+        "flag_nacional":        "UF=BR (registro nacional)",
+        "flag_amostra_ok":      "n ≥ 1.000 entrevistados",
+        "flag_abrangencia_br":  "aplicada em múltiplos estados/regiões",
+        "flag_instituto_ativo": "instituto na lista de referência",
+        "usa_no_agregador":     "recomendada para o agregador",
+    }
+    for flag, desc in infos.items():
+        v = int(df[flag].sum())
+        f = len(df) - v
+        L.append(f"| `{flag}` | {v} | {f} | {desc} |")
+    L.append("")
+
+    # Novas
     if len(novas) > 0:
-        linhas.append("## 🆕 Novas pesquisas")
-        linhas.append("")
-        for _, r in novas.sort_values("registro", ascending=False).iterrows():
-            linhas.append(f"### {r['instituto']}")
-            linhas.append(f"- **Protocolo:** `{r['NR_PROTOCOLO_REGISTRO']}`")
-            linhas.append(f"- **Registrado no TSE:** {r['registro']}")
-            linhas.append(f"- **Campo:** {r['campo_inicio']} → {r['campo_fim']} ({r['duracao_dias']} dias)")
-            linhas.append(f"- **Divulgação prevista:** {r['divulgacao']}")
-            linhas.append(f"- **Amostra:** {int(r['QT_ENTREVISTADO']):,} entrevistados")
-            custo = f"R$ {r['custo']:,.0f}" if pd.notna(r["custo"]) else "não informado"
-            linhas.append(f"- **Custo:** {custo}")
-            linhas.append(f"- **Metodologia:** {r['metodologia']}")
-            linhas.append(f"- **Instituto conhecido:** {'✅ sim' if r['conhecido'] else '⚠️ não reconhecido'}")
-            linhas.append("")
+        L.append("## 🆕 Novas pesquisas detectadas")
+        L.append("")
+        for _, r in novas.sort_values("tse_registro", ascending=False).iterrows():
+            emoji = "✅" if r["usa_no_agregador"] else "⚠️"
+            L.append(f"### {emoji} {r['instituto']}")
+            L.append("| Campo | Valor |")
+            L.append("|---|---|")
+            L.append(f"| Protocolo | `{r['NR_PROTOCOLO_REGISTRO']}` |")
+            L.append(f"| Registro TSE | {r['tse_registro']} |")
+            L.append(f"| Campo | {r['campo_inicio']} → {r['campo_fim']} ({r['campo_dias']} dias) |")
+            L.append(f"| Divulgação | {r['divulgacao']} |")
+            L.append(f"| Amostra | {int(r['QT_ENTREVISTADO']):,} entrevistados |")
+            custo = f"R$ {r['custo_reais']:,.0f}" if pd.notna(r["custo_reais"]) else "não informado"
+            L.append(f"| Custo | {custo} |")
+            L.append(f"| Metodologia | {r['metodologia']} |")
+            L.append(f"| flag_nacional | {'✅' if r['flag_nacional'] else '❌'} |")
+            L.append(f"| flag_amostra_ok | {'✅' if r['flag_amostra_ok'] else '❌'} (n={int(r['QT_ENTREVISTADO'])}) |")
+            L.append(f"| flag_abrangencia_br | {'✅' if r['flag_abrangencia_br'] else '❌'} {'(confirmado nacional)' if r['_abrang_confirmado_nacional'] else '(sem confirmação clara)' if r['_abrang_sem_padrao'] else '(detectado como estadual/municipal)'} |")
+            L.append(f"| flag_instituto_ativo | {'✅' if r['flag_instituto_ativo'] else '⚠️ novo instituto'} |")
+            L.append(f"| **usa_no_agregador** | {'✅ **sim**' if r['usa_no_agregador'] else '❌ **não** — verificar manualmente'} |")
+            L.append("")
     else:
-        linhas.append("## ✅ Nenhuma pesquisa nova hoje")
-        linhas.append("")
+        L.append("## ✅ Nenhuma pesquisa nova hoje")
+        L.append("")
 
-    # Próximas divulgações
-    futuras = df[
-        pd.to_datetime(df["divulgacao"], errors="coerce").dt.date > HOJE
-    ].sort_values("divulgacao")
-
+    # Divulgações futuras
+    futuras = (df[pd.to_datetime(df["divulgacao"], errors="coerce").dt.date > HOJE]
+               .drop_duplicates("NR_PROTOCOLO_REGISTRO")
+               .sort_values("divulgacao"))
     if len(futuras) > 0:
-        linhas.append("## 📅 Divulgações futuras registradas")
-        linhas.append("")
-        linhas.append("| Instituto | Campo | Divulgação | Amostra |")
-        linhas.append("|-----------|-------|------------|---------|")
-        vistos = set()
+        L.append("## 📅 Divulgações futuras registradas")
+        L.append("")
+        L.append("| Instituto | Campo | Divulgação | Amostra | Usa agregador |")
+        L.append("|-----------|-------|------------|---------|--------------|")
         for _, r in futuras.iterrows():
-            chave = str(r["NR_PROTOCOLO_REGISTRO"])
-            if chave in vistos:
-                continue
-            vistos.add(chave)
-            linhas.append(
-                f"| {r['instituto']} "
-                f"| {r['campo_inicio']} → {r['campo_fim']} "
-                f"| {r['divulgacao']} "
-                f"| {int(r['QT_ENTREVISTADO']):,} |"
-            )
-        linhas.append("")
+            usa = "✅" if r["usa_no_agregador"] else "❌"
+            L.append(f"| {r['instituto']} | {r['campo_inicio']} → {r['campo_fim']} | {r['divulgacao']} | {int(r['QT_ENTREVISTADO']):,} | {usa} |")
+        L.append("")
 
-    # Resumo por instituto
-    linhas.append("## 📊 Pesquisas por instituto (acumulado 2026)")
-    linhas.append("")
-    linhas.append("| Instituto | Pesquisas | Última divulgação | Amostra média |")
-    linhas.append("|-----------|-----------|------------------|--------------|")
-    por_inst = (
-        df.groupby("instituto")
-        .agg(total=("NR_PROTOCOLO_REGISTRO", "count"),
-             ultima=("divulgacao", "max"),
-             media=("QT_ENTREVISTADO", "mean"))
-        .sort_values("total", ascending=False)
-        .head(20)
-    )
-    for inst, row in por_inst.iterrows():
-        linhas.append(
-            f"| {inst} | {int(row['total'])} | {row['ultima']} | {row['media']:,.0f} |"
-        )
-    linhas.append("")
+    # Todas as pesquisas recomendadas
+    L.append("## 📋 Pesquisas recomendadas para o agregador (`usa_no_agregador=True`)")
+    L.append("")
+    L.append("| Instituto | Campo fim | Amostra | Metodologia | Abrangência confirmada |")
+    L.append("|-----------|-----------|---------|-------------|----------------------|")
+    recomendadas = (df[df["usa_no_agregador"]]
+                    .drop_duplicates("NR_PROTOCOLO_REGISTRO")
+                    .sort_values("campo_fim", ascending=False))
+    for _, r in recomendadas.iterrows():
+        conf = "✅ confirmado" if r["_abrang_confirmado_nacional"] else "⚠️ sem padrão"
+        L.append(f"| {r['instituto']} | {r['campo_fim']} | {int(r['QT_ENTREVISTADO']):,} | {r['metodologia']} | {conf} |")
+    L.append("")
+    L.append("---")
+    L.append(f"*Gerado em {datetime.now().strftime('%d/%m/%Y %H:%M')} · Veja [CRITERIOS.md](../CRITERIOS.md) para documentação dos flags*")
 
-    # Alertas
-    alertas = []
-    institutos_novos = novas[~novas["conhecido"]]["instituto"].tolist()
-    if institutos_novos:
-        alertas.append(f"⚠️ Instituto(s) nunca visto(s) antes: **{', '.join(institutos_novos)}**")
-    grandes = novas[novas["QT_ENTREVISTADO"] >= 4000]
-    for _, r in grandes.iterrows():
-        alertas.append(f"🔬 Pesquisa com amostra grande: **{r['instituto']}** (n={int(r['QT_ENTREVISTADO']):,})")
+    p = ROOT / f"relatorio_{HOJE}.md"
+    p.write_text("\n".join(L), encoding="utf-8")
+    log.info(f"  Relatório: {p.name}")
 
-    if alertas:
-        linhas.append("## ⚡ Alertas")
-        linhas.append("")
-        for a in alertas:
-            linhas.append(a)
-        linhas.append("")
 
-    linhas.append("---")
-    linhas.append(f"*Gerado automaticamente em {datetime.now().strftime('%d/%m/%Y %H:%M')} (Brasília)*")
-
-    caminho = ROOT / f"relatorio_{HOJE}.md"
-    caminho.write_text("\n".join(linhas), encoding="utf-8")
-    log.info(f"  Relatório salvo: {caminho.name}")
-
-# ─── 9. Pipeline principal ─────────────────────────────────────────────────────
+# ─── 9. Pipeline principal ────────────────────────────────────────────────────
 
 def main() -> int:
     log.info(f"========== Monitor TSE — {HOJE} ==========")
 
-    df_bruto = baixar()
-    df       = filtrar(df_bruto)
-    df       = enriquecer(df)
+    df = baixar()
+    df = filtrar_cargo(df)
+    df = calcular_flags(df)
+    df = enriquecer(df)
 
     salvar_snapshot(df)
 
@@ -338,12 +419,9 @@ def main() -> int:
     salvar_json(novas)
     gerar_relatorio(df, novas)
 
-    log.info(f"========== Concluído ==========")
-
-    # exit 0 = sem novidades | exit 1 = há novas (o workflow usa isso)
+    log.info("========== Concluído ==========")
     return 1 if len(novas) > 0 else 0
 
 
 if __name__ == "__main__":
     sys.exit(main())
-
