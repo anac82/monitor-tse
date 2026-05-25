@@ -345,9 +345,15 @@ def atualizar_historico(df: pd.DataFrame) -> None:
     novo = df[COLUNAS].copy()
     if HISTORICO_CSV.exists():
         existente = pd.read_csv(HISTORICO_CSV)
-        combinado = pd.concat([existente, novo], ignore_index=True)
-        # keep="first" preserva edições manuais de usa_no_agregador
-        combinado = combinado.drop_duplicates("NR_PROTOCOLO_REGISTRO", keep="first")
+        # Se o histórico não tem as colunas novas, recria do zero
+        colunas_novas = set(COLUNAS) - set(existente.columns)
+        if colunas_novas:
+            log.info(f"  Histórico desatualizado — recriando (colunas novas: {colunas_novas})")
+            combinado = novo
+        else:
+            combinado = pd.concat([existente, novo], ignore_index=True)
+            # keep="first" preserva edições manuais de usa_no_agregador
+            combinado = combinado.drop_duplicates("NR_PROTOCOLO_REGISTRO", keep="first")
     else:
         combinado = novo
     combinado.to_csv(HISTORICO_CSV, index=False, encoding="utf-8")
