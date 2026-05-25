@@ -1,1 +1,1212 @@
-[2026-05-25] Nenhuma pesquisa nova hoje.
+============================================================
+MONITOR TSE — 2026-05-25
+134 NOVA(S) PESQUISA(S) PRESIDENCIAL(IS)
+============================================================
+
+INSTITUTO:   INSTITUTO SETA DE PESQUISA
+PROTOCOLO:   BR018782026
+CAMPO:       2026-05-26 até 2026-05-28
+DIVULGAÇÃO:  2026-05-31
+AMOSTRA:     1.500 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   ANOVA INSTITUTO DE PESQUISA
+PROTOCOLO:   BR048462026
+CAMPO:       2026-05-25 até 2026-05-27
+DIVULGAÇÃO:  2026-05-30
+AMOSTRA:     2.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO OPINIAO
+PROTOCOLO:   BR075352026
+CAMPO:       2026-05-25 até 2026-05-27
+DIVULGAÇÃO:  2026-05-30
+AMOSTRA:     1.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   ITEM PESQUISAS TECNICAS
+PROTOCOLO:   BR042722026
+CAMPO:       2026-05-18 até 2026-05-22
+DIVULGAÇÃO:  2026-05-29
+AMOSTRA:     1.250 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR042422026
+CAMPO:       2026-05-25 até 2026-05-27
+DIVULGAÇÃO:  2026-05-28
+AMOSTRA:     1.022 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR035622026
+CAMPO:       2026-05-25 até 2026-05-26
+DIVULGAÇÃO:  2026-05-27
+AMOSTRA:     1.600 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INDEXA PESQUISAS
+PROTOCOLO:   BR021542026
+CAMPO:       2026-05-22 até 2026-05-24
+DIVULGAÇÃO:  2026-05-27
+AMOSTRA:     2.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR002822026
+CAMPO:       2026-05-23 até 2026-05-25
+DIVULGAÇÃO:  2026-05-26
+AMOSTRA:     1.600 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO ESTIMATIVA
+PROTOCOLO:   BR070892026
+CAMPO:       2026-05-16 até 2026-05-17
+DIVULGAÇÃO:  2026-05-24
+AMOSTRA:     301 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO DE PESQUISA MULTIPLA
+PROTOCOLO:   BR004322026
+CAMPO:       2026-05-16 até 2026-05-20
+DIVULGAÇÃO:  2026-05-24
+AMOSTRA:     1.070 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   DELTA AGENCIA DE PESQUISA
+PROTOCOLO:   BR092732026
+CAMPO:       2026-05-13 até 2026-05-16
+DIVULGAÇÃO:  2026-05-24
+AMOSTRA:     800 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR093012026
+CAMPO:       2026-05-15 até 2026-05-19
+DIVULGAÇÃO:  2026-05-21
+AMOSTRA:     9.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR074892026
+CAMPO:       2026-05-20 até 2026-05-22
+DIVULGAÇÃO:  2026-05-22
+AMOSTRA:     2.004 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   AFFARE INSTITUTE
+PROTOCOLO:   BR038502026
+CAMPO:       2026-05-16 até 2026-05-21
+DIVULGAÇÃO:  2026-05-22
+AMOSTRA:     1.500 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   AMOSTRAGEM OPINIAO E MERCADO
+PROTOCOLO:   BR054362026
+CAMPO:       2026-05-05 até 2026-05-08
+DIVULGAÇÃO:  2026-05-21
+AMOSTRA:     400 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   AMOSTRAGEM OPINIAO E MERCADO
+PROTOCOLO:   BR037722026
+CAMPO:       2026-05-04 até 2026-05-06
+DIVULGAÇÃO:  2026-05-21
+AMOSTRA:     400 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR071142026
+CAMPO:       2026-05-19 até 2026-05-20
+DIVULGAÇÃO:  2026-05-21
+AMOSTRA:     1.600 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   OPNUS
+PROTOCOLO:   BR057332026
+CAMPO:       2026-05-17 até 2026-05-20
+DIVULGAÇÃO:  2026-05-21
+AMOSTRA:     1.100 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR017442026
+CAMPO:       2026-05-18 até 2026-05-19
+DIVULGAÇÃO:  2026-05-20
+AMOSTRA:     1.600 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   DATA MAX
+PROTOCOLO:   BR089772026
+CAMPO:       2026-05-11 até 2026-05-12
+DIVULGAÇÃO:  2026-05-20
+AMOSTRA:     500 entrevistados
+METODOLOGIA: presencial
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO DE PESQUISA MULTIPLA
+PROTOCOLO:   BR026022026
+CAMPO:       2026-05-07 até 2026-05-08
+DIVULGAÇÃO:  2026-05-17
+AMOSTRA:     300 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   PARLA MENTORS CONSULTORIA
+PROTOCOLO:   BR012472026
+CAMPO:       2026-05-13 até 2026-05-15
+DIVULGAÇÃO:  2026-05-16
+AMOSTRA:     400 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR060372026
+CAMPO:       2026-05-11 até 2026-05-13
+DIVULGAÇÃO:  2026-05-15
+AMOSTRA:     604 entrevistados
+METODOLOGIA: presencial
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   DOXA
+PROTOCOLO:   BR059872026
+CAMPO:       2026-05-09 até 2026-05-14
+DIVULGAÇÃO:  2026-05-15
+AMOSTRA:     2.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR002902026
+CAMPO:       2026-05-12 até 2026-05-14
+DIVULGAÇÃO:  2026-05-15
+AMOSTRA:     2.004 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO DE PESQUISA DATA AZ
+PROTOCOLO:   BR066462026
+CAMPO:       2026-05-07 até 2026-05-08
+DIVULGAÇÃO:  2026-05-14
+AMOSTRA:     400 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR035982026
+CAMPO:       2026-05-08 até 2026-05-11
+DIVULGAÇÃO:  2026-05-13
+AMOSTRA:     2.004 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR009462026
+CAMPO:       2026-05-11 até 2026-05-12
+DIVULGAÇÃO:  2026-05-13
+AMOSTRA:     1.600 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR040592026
+CAMPO:       2026-05-07 até 2026-05-08
+DIVULGAÇÃO:  2026-05-13
+AMOSTRA:     4.729 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR047622026
+CAMPO:       2026-05-09 até 2026-05-11
+DIVULGAÇÃO:  2026-05-12
+AMOSTRA:     1.600 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   IPSENSUS PESQUISAS
+PROTOCOLO:   BR021132026
+CAMPO:       2026-05-09 até 2026-05-10
+DIVULGAÇÃO:  2026-05-11
+AMOSTRA:     400 entrevistados
+METODOLOGIA: presencial
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   METADATA
+PROTOCOLO:   BR047272026
+CAMPO:       2026-05-07 até 2026-05-09
+DIVULGAÇÃO:  2026-05-11
+AMOSTRA:     1.550 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   AMOSTRAGEM OPINIAO E MERCADO
+PROTOCOLO:   BR005752026
+CAMPO:       2026-04-30 até 2026-05-04
+DIVULGAÇÃO:  2026-05-10
+AMOSTRA:     400 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   AMOSTRAGEM OPINIAO E MERCADO
+PROTOCOLO:   BR036582026
+CAMPO:       2026-04-30 até 2026-05-03
+DIVULGAÇÃO:  2026-05-10
+AMOSTRA:     400 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   AMOSTRAGEM OPINIAO E MERCADO
+PROTOCOLO:   BR063302026
+CAMPO:       2026-04-30 até 2026-05-03
+DIVULGAÇÃO:  2026-05-10
+AMOSTRA:     400 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   VERITATE
+PROTOCOLO:   BR057822026
+CAMPO:       2026-04-29 até 2026-05-03
+DIVULGAÇÃO:  2026-05-08
+AMOSTRA:     1.500 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO SETA DE PESQUISA
+PROTOCOLO:   BR089142026
+CAMPO:       2026-05-03 até 2026-05-05
+DIVULGAÇÃO:  2026-05-08
+AMOSTRA:     1.500 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO FRANCA DE PESQUISA PESQUISA E ASSESSORIA
+PROTOCOLO:   BR031752026
+CAMPO:       2026-04-27 até 2026-05-01
+DIVULGAÇÃO:  2026-05-06
+AMOSTRA:     1.067 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   NEOKEMP PESQUISAS
+PROTOCOLO:   BR069162026
+CAMPO:       2026-05-04 até 2026-05-06
+DIVULGAÇÃO:  2026-05-06
+AMOSTRA:     1.008 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR036272026
+CAMPO:       2026-05-02 até 2026-05-04
+DIVULGAÇÃO:  2026-05-05
+AMOSTRA:     2.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO SETA DE PESQUISA
+PROTOCOLO:   BR003532026
+CAMPO:       2026-04-29 até 2026-05-01
+DIVULGAÇÃO:  2026-05-04
+AMOSTRA:     1.500 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   PERCENT PESQUISA DE MERCADO E OPINIAO
+PROTOCOLO:   BR007262026
+CAMPO:       2026-04-29 até 2026-05-03
+DIVULGAÇÃO:  2026-05-04
+AMOSTRA:     1.200 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO SETA DE PESQUISA
+PROTOCOLO:   BR031762026
+CAMPO:       2026-04-29 até 2026-04-30
+DIVULGAÇÃO:  2026-05-04
+AMOSTRA:     450 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   100 CIDADES
+PROTOCOLO:   BR019712026
+CAMPO:       2026-04-24 até 2026-04-25
+DIVULGAÇÃO:  2026-05-04
+AMOSTRA:     800 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO DATASENSUS
+PROTOCOLO:   BR076872026
+CAMPO:       2026-04-30 até 2026-05-02
+DIVULGAÇÃO:  2026-05-03
+AMOSTRA:     800 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO DE PESQUISA RESULTADO IPR
+PROTOCOLO:   BR011652026
+CAMPO:       2026-04-27 até 2026-05-01
+DIVULGAÇÃO:  2026-05-03
+AMOSTRA:     784 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR069152026
+CAMPO:       2026-04-24 até 2026-04-28
+DIVULGAÇÃO:  2026-04-30
+AMOSTRA:     1.104 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR013682026
+CAMPO:       2026-04-24 até 2026-04-28
+DIVULGAÇÃO:  2026-04-30
+AMOSTRA:     1.104 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR013472026
+CAMPO:       2026-04-24 até 2026-04-28
+DIVULGAÇÃO:  2026-04-30
+AMOSTRA:     1.002 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR088162026
+CAMPO:       2026-04-25 até 2026-04-28
+DIVULGAÇÃO:  2026-04-30
+AMOSTRA:     804 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   NEOKEMP PESQUISAS
+PROTOCOLO:   BR002572026
+CAMPO:       2026-04-27 até 2026-04-29
+DIVULGAÇÃO:  2026-04-29
+AMOSTRA:     1.008 entrevistados
+METODOLOGIA: telefone
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR087032026
+CAMPO:       2026-04-23 até 2026-04-27
+DIVULGAÇÃO:  2026-04-29
+AMOSTRA:     1.200 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR099282026
+CAMPO:       2026-04-23 até 2026-04-27
+DIVULGAÇÃO:  2026-04-29
+AMOSTRA:     1.650 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO DE PESQUISA DATA AZ
+PROTOCOLO:   BR035092026
+CAMPO:       2026-04-20 até 2026-04-25
+DIVULGAÇÃO:  2026-04-28
+AMOSTRA:     800 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR004302026
+CAMPO:       2026-04-22 até 2026-04-26
+DIVULGAÇÃO:  2026-04-28
+AMOSTRA:     1.482 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR034732026
+CAMPO:       2026-04-22 até 2026-04-26
+DIVULGAÇÃO:  2026-04-28
+AMOSTRA:     900 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR017552026
+CAMPO:       2026-04-21 até 2026-04-25
+DIVULGAÇÃO:  2026-04-27
+AMOSTRA:     900 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR062072026
+CAMPO:       2026-04-21 até 2026-04-25
+DIVULGAÇÃO:  2026-04-27
+AMOSTRA:     1.200 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR016562026
+CAMPO:       2026-04-21 até 2026-04-25
+DIVULGAÇÃO:  2026-04-27
+AMOSTRA:     1.104 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR024192026
+CAMPO:       2026-04-18 até 2026-04-19
+DIVULGAÇÃO:  2026-04-26
+AMOSTRA:     601 entrevistados
+METODOLOGIA: presencial
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   AMOSTRAGEM OPINIAO E MERCADO
+PROTOCOLO:   BR003662026
+CAMPO:       2026-04-16 até 2026-04-20
+DIVULGAÇÃO:  2026-04-26
+AMOSTRA:     400 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   AMOSTRAGEM OPINIAO E MERCADO
+PROTOCOLO:   BR079702026
+CAMPO:       2026-04-15 até 2026-04-18
+DIVULGAÇÃO:  2026-04-26
+AMOSTRA:     400 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   AMOSTRAGEM OPINIAO E MERCADO
+PROTOCOLO:   BR078242026
+CAMPO:       2026-04-15 até 2026-04-18
+DIVULGAÇÃO:  2026-04-26
+AMOSTRA:     400 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR058212026
+CAMPO:       2026-04-14 até 2026-04-16
+DIVULGAÇÃO:  2026-04-24
+AMOSTRA:     312 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   AMOSTRAGEM OPINIAO E MERCADO
+PROTOCOLO:   BR034112026
+CAMPO:       2026-04-10 até 2026-04-14
+DIVULGAÇÃO:  2026-04-22
+AMOSTRA:     600 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   PARLA MENTORS CONSULTORIA
+PROTOCOLO:   BR018682026
+CAMPO:       2026-04-16 até 2026-04-18
+DIVULGAÇÃO:  2026-04-22
+AMOSTRA:     400 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   AMOSTRAGEM OPINIAO E MERCADO
+PROTOCOLO:   BR095922026
+CAMPO:       2026-04-09 até 2026-04-13
+DIVULGAÇÃO:  2026-04-22
+AMOSTRA:     1.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   OPINIAO PESQUISAS SOCIAIS
+PROTOCOLO:   BR094462026
+CAMPO:       2026-04-14 até 2026-04-17
+DIVULGAÇÃO:  2026-04-19
+AMOSTRA:     2.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR012212026
+CAMPO:       2026-04-13 até 2026-04-15
+DIVULGAÇÃO:  2026-04-16
+AMOSTRA:     1.022 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR092852026
+CAMPO:       2026-04-10 até 2026-04-13
+DIVULGAÇÃO:  2026-04-15
+AMOSTRA:     2.004 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   DOXA
+PROTOCOLO:   BR090552026
+CAMPO:       2026-04-09 até 2026-04-14
+DIVULGAÇÃO:  2026-04-15
+AMOSTRA:     2.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO DIVULGA
+PROTOCOLO:   BR044092026
+CAMPO:       2026-04-02 até 2026-04-03
+DIVULGAÇÃO:  2026-04-14
+AMOSTRA:     302 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR028472026
+CAMPO:       2026-04-08 até 2026-04-12
+DIVULGAÇÃO:  2026-04-14
+AMOSTRA:     2.002 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   AFFARE INSTITUTE
+PROTOCOLO:   BR089712026
+CAMPO:       2026-04-07 até 2026-04-11
+DIVULGAÇÃO:  2026-04-12
+AMOSTRA:     1.500 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR037702026
+CAMPO:       2026-04-07 até 2026-04-09
+DIVULGAÇÃO:  2026-04-11
+AMOSTRA:     2.004 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   100 CIDADES
+PROTOCOLO:   BR078732026
+CAMPO:       2026-04-01 até 2026-04-06
+DIVULGAÇÃO:  2026-04-10
+AMOSTRA:     800 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO FRANCA DE PESQUISA PESQUISA E ASSESSORIA
+PROTOCOLO:   BR044202026
+CAMPO:       2026-04-06 até 2026-04-08
+DIVULGAÇÃO:  2026-04-08
+AMOSTRA:     1.200 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR099642026
+CAMPO:       2026-04-06 até 2026-04-07
+DIVULGAÇÃO:  2026-04-08
+AMOSTRA:     1.600 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   CEPPHOR
+PROTOCOLO:   BR048902026
+CAMPO:       2026-04-04 até 2026-04-05
+DIVULGAÇÃO:  2026-04-08
+AMOSTRA:     400 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO SETA DE PESQUISA
+PROTOCOLO:   BR060092026
+CAMPO:       2026-03-31 até 2026-04-02
+DIVULGAÇÃO:  2026-04-06
+AMOSTRA:     1.500 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   METADATA
+PROTOCOLO:   BR027782026
+CAMPO:       2026-03-27 até 2026-03-28
+DIVULGAÇÃO:  2026-04-01
+AMOSTRA:     1.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   VERITAS PLANEJAMENTO
+PROTOCOLO:   BR058232026
+CAMPO:       2026-03-26 até 2026-03-28
+DIVULGAÇÃO:  2026-03-31
+AMOSTRA:     1.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO SETA DE PESQUISA
+PROTOCOLO:   BR034912026
+CAMPO:       2026-03-26 até 2026-03-28
+DIVULGAÇÃO:  2026-03-31
+AMOSTRA:     1.500 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   DOXA
+PROTOCOLO:   BR030382026
+CAMPO:       2026-03-26 até 2026-03-30
+DIVULGAÇÃO:  2026-03-31
+AMOSTRA:     1.064 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR062762026
+CAMPO:       2026-03-27 até 2026-03-28
+DIVULGAÇÃO:  2026-03-30
+AMOSTRA:     1.600 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   MEDIA - INTELIGENCIA EM PESQUISA
+PROTOCOLO:   BR093812026
+CAMPO:       2026-03-23 até 2026-03-26
+DIVULGAÇÃO:  2026-03-29
+AMOSTRA:     -2.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   AFFARE INSTITUTE
+PROTOCOLO:   BR087132026
+CAMPO:       2026-03-23 até 2026-03-26
+DIVULGAÇÃO:  2026-03-28
+AMOSTRA:     1.500 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR023002026
+CAMPO:       2026-03-22 até 2026-03-25
+DIVULGAÇÃO:  2026-03-28
+AMOSTRA:     1.104 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   ANOVA INSTITUTO DE PESQUISA
+PROTOCOLO:   BR096582026
+CAMPO:       2026-03-19 até 2026-03-21
+DIVULGAÇÃO:  2026-03-26
+AMOSTRA:     2.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR006642026
+CAMPO:       2026-03-23 até 2026-03-24
+DIVULGAÇÃO:  2026-03-25
+AMOSTRA:     1.600 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   DATA CONTROL INSTITUTO DE PESQUISA
+PROTOCOLO:   BR049482026
+CAMPO:       2026-03-17 até 2026-03-20
+DIVULGAÇÃO:  2026-03-25
+AMOSTRA:     600 entrevistados
+METODOLOGIA: presencial
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   IPEC
+PROTOCOLO:   BR053762026
+CAMPO:       2026-03-19 até 2026-03-25
+DIVULGAÇÃO:  2026-03-25
+AMOSTRA:     800 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR057632026
+CAMPO:       2026-03-21 até 2026-03-23
+DIVULGAÇÃO:  2026-03-24
+AMOSTRA:     1.600 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   NEOKEMP PESQUISAS
+PROTOCOLO:   BR005072026
+CAMPO:       2026-03-18 até 2026-03-20
+DIVULGAÇÃO:  2026-03-23
+AMOSTRA:     1.008 entrevistados
+METODOLOGIA: telefone
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR025312026
+CAMPO:       2026-03-20 até 2026-03-21
+DIVULGAÇÃO:  2026-03-23
+AMOSTRA:     1.600 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR050682026
+CAMPO:       2026-03-16 até 2026-03-18
+DIVULGAÇÃO:  2026-03-23
+AMOSTRA:     816 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO SETA DE PESQUISA
+PROTOCOLO:   BR011742026
+CAMPO:       2026-03-07 até 2026-03-09
+DIVULGAÇÃO:  2026-03-20
+AMOSTRA:     1.500 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   FACTUM COMUNICACAO
+PROTOCOLO:   BR099312026
+CAMPO:       2026-03-16 até 2026-03-18
+DIVULGAÇÃO:  2026-03-20
+AMOSTRA:     500 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR041032026
+CAMPO:       2026-03-17 até 2026-03-18
+DIVULGAÇÃO:  2026-03-19
+AMOSTRA:     1.500 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR013412026
+CAMPO:       2026-03-14 até 2026-03-18
+DIVULGAÇÃO:  2026-03-19
+AMOSTRA:     2.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR088332026
+CAMPO:       2026-03-16 até 2026-03-17
+DIVULGAÇÃO:  2026-03-18
+AMOSTRA:     1.500 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO FRANCA DE PESQUISA PESQUISA E ASSESSORIA
+PROTOCOLO:   BR019052026
+CAMPO:       2026-03-16 até 2026-03-18
+DIVULGAÇÃO:  2026-03-18
+AMOSTRA:     1.224 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR046652026
+CAMPO:       2026-03-14 até 2026-03-16
+DIVULGAÇÃO:  2026-03-17
+AMOSTRA:     1.500 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR090112026
+CAMPO:       2026-03-13 até 2026-03-14
+DIVULGAÇÃO:  2026-03-16
+AMOSTRA:     2.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR050442026
+CAMPO:       2026-03-11 até 2026-03-12
+DIVULGAÇÃO:  2026-03-13
+AMOSTRA:     2.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR029442026
+CAMPO:       2026-03-05 até 2026-03-11
+DIVULGAÇÃO:  2026-03-13
+AMOSTRA:     1.500 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   ALFA INTELIGENCIA
+PROTOCOLO:   BR031652026
+CAMPO:       2026-03-06 até 2026-03-11
+DIVULGAÇÃO:  2026-03-12
+AMOSTRA:     1.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR079462026
+CAMPO:       2026-03-10 até 2026-03-11
+DIVULGAÇÃO:  2026-03-12
+AMOSTRA:     2.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR043672026
+CAMPO:       2026-03-09 até 2026-03-10
+DIVULGAÇÃO:  2026-03-11
+AMOSTRA:     2.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR058092026
+CAMPO:       2026-03-06 até 2026-03-09
+DIVULGAÇÃO:  2026-03-11
+AMOSTRA:     2.004 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO DE PESQUISA RESULTADO IPR
+PROTOCOLO:   BR029952026
+CAMPO:       2026-03-05 até 2026-03-09
+DIVULGAÇÃO:  2026-03-11
+AMOSTRA:     784 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR042392026
+CAMPO:       2026-03-05 até 2026-03-06
+DIVULGAÇÃO:  2026-03-10
+AMOSTRA:     400 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR019022026
+CAMPO:       2026-03-06 até 2026-03-07
+DIVULGAÇÃO:  2026-03-09
+AMOSTRA:     2.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR037152026
+CAMPO:       2026-03-03 até 2026-03-05
+DIVULGAÇÃO:  2026-03-05
+AMOSTRA:     2.004 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR067982026
+CAMPO:       2026-03-03 até 2026-03-05
+DIVULGAÇÃO:  2026-03-05
+AMOSTRA:     1.608 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO SETA DE PESQUISA
+PROTOCOLO:   BR087612026
+CAMPO:       2026-02-26 até 2026-02-28
+DIVULGAÇÃO:  2026-03-05
+AMOSTRA:     1.500 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR093532026
+CAMPO:       2026-02-28 até 2026-03-02
+DIVULGAÇÃO:  2026-03-03
+AMOSTRA:     2.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   BADRA COMUNICACAO
+PROTOCOLO:   BR030862026
+CAMPO:       2026-02-23 até 2026-02-27
+DIVULGAÇÃO:  2026-02-27
+AMOSTRA:     3.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   PERCENT PESQUISA DE MERCADO E OPINIAO
+PROTOCOLO:   BR085432026
+CAMPO:       2026-02-09 até 2026-02-17
+DIVULGAÇÃO:  2026-02-21
+AMOSTRA:     1.200 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO DE PESQUISA MULTIPLA
+PROTOCOLO:   BR030572026
+CAMPO:       2026-02-03 até 2026-02-07
+DIVULGAÇÃO:  2026-02-12
+AMOSTRA:     1.200 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   100 CIDADES
+PROTOCOLO:   BR081812026
+CAMPO:       2026-02-07 até 2026-02-09
+DIVULGAÇÃO:  2026-02-11
+AMOSTRA:     800 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR042912026
+CAMPO:       2026-02-05 até 2026-02-09
+DIVULGAÇÃO:  2026-02-11
+AMOSTRA:     2.004 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR002802026
+CAMPO:       2026-02-09 até 2026-02-10
+DIVULGAÇÃO:  2026-02-11
+AMOSTRA:     2.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR007892026
+CAMPO:       2026-02-07 até 2026-02-09
+DIVULGAÇÃO:  2026-02-10
+AMOSTRA:     2.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR064282026
+CAMPO:       2026-02-06 até 2026-02-07
+DIVULGAÇÃO:  2026-02-09
+AMOSTRA:     2.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   DATA CONTROL INSTITUTO DE PESQUISA
+PROTOCOLO:   BR015132026
+CAMPO:       2026-01-30 até 2026-02-03
+DIVULGAÇÃO:  2026-02-08
+AMOSTRA:     800 entrevistados
+METODOLOGIA: presencial
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO PHOENIX & ASSOCIADOS
+PROTOCOLO:   BR074072026
+CAMPO:       2026-02-02 até 2026-02-05
+DIVULGAÇÃO:  2026-02-06
+AMOSTRA:     605 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   BADRA COMUNICACAO
+PROTOCOLO:   BR071282026
+CAMPO:       2026-01-27 até 2026-01-30
+DIVULGAÇÃO:  2026-02-06
+AMOSTRA:     1.500 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR068152026
+CAMPO:       2026-02-03 até 2026-02-04
+DIVULGAÇÃO:  2026-02-05
+AMOSTRA:     2.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   #NULO#
+PROTOCOLO:   BR065592026
+CAMPO:       2026-02-02 até 2026-02-05
+DIVULGAÇÃO:  2026-02-05
+AMOSTRA:     1.022 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR051802026
+CAMPO:       2026-02-02 até 2026-02-03
+DIVULGAÇÃO:  2026-02-04
+AMOSTRA:     2.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   INSTITUTO SETA DE PESQUISA
+PROTOCOLO:   BR005292026
+CAMPO:       2026-01-28 até 2026-01-30
+DIVULGAÇÃO:  2026-02-02
+AMOSTRA:     1.500 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   100 CIDADES
+PROTOCOLO:   BR041482026
+CAMPO:       2026-01-24 até 2026-01-27
+DIVULGAÇÃO:  2026-01-29
+AMOSTRA:     800 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+INSTITUTO:   ANOVA INSTITUTO DE PESQUISA
+PROTOCOLO:   BR040542026
+CAMPO:       2026-01-24 até 2026-01-26
+DIVULGAÇÃO:  2026-01-28
+AMOSTRA:     2.000 entrevistados
+METODOLOGIA: URA
+INSTITUTO:   NOVO — verificar manualmente
+------------------------------------------------------------
+
+Acesse o repositório para ver o relatório completo.
