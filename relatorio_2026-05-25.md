@@ -124,4 +124,4 @@
 | #NULO# | 2026-01-11 | 2,004 | URA | ✅ confirmado |
 
 ---
-*Gerado em 25/05/2026 21:22 · Veja [CRITERIOS.md](../CRITERIOS.md) para documentação dos flags*
+*Gerado em 25/05/2026 21:24 · Veja [CRITERIOS.md](../CRITERIOS.md) para documentação dos flags*
