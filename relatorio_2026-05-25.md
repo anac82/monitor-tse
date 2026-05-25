@@ -57,4 +57,4 @@
 | DIRETO AO PONTO PESQUISAS | 1 | 2026-03-07 | 1,200 |
 
 ---
-*Gerado automaticamente em 25/05/2026 20:39 (Brasília)*
+*Gerado automaticamente em 25/05/2026 21:03 (Brasília)*
