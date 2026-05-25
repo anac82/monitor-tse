@@ -1,0 +1,109 @@
+name: Monitor TSE
+
+on:
+  schedule:
+    - cron: "0 12 * * *"   # 09:00 Brasília = 12:00 UTC
+  workflow_dispatch:        # permite rodar manualmente
+
+jobs:
+  monitorar:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+
+    steps:
+      # 1. Baixar o código do repositório
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Configurar Python
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # 3. Instalar dependências
+      - name: Instalar dependências
+        run: pip install pandas requests
+
+      # 4. Rodar o agente
+      - name: Rodar monitor
+        id: monitor
+        run: |
+          python scripts/monitor.py
+          echo "tem_novas=$?" >> $GITHUB_OUTPUT
+        continue-on-error: true
+
+      # 5. Commitar arquivos gerados (snapshot, histórico, relatório, JSON)
+      - name: Salvar resultados no repositório
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ relatorio_*.md
+          git diff --cached --quiet || git commit -m "monitor: snapshot $(date +'%Y-%m-%d')"
+          git push
+
+      # 6. Abrir Issue se há pesquisas novas
+      - name: Abrir Issue com novas pesquisas
+        if: steps.monitor.outputs.tem_novas == '1'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs   = require('fs');
+            const hoje = new Date().toISOString().slice(0, 10);
+            const path = `data/novas_${hoje}.json`;
+
+            if (!fs.existsSync(path)) { console.log('JSON não encontrado.'); return; }
+
+            const dados = JSON.parse(fs.readFileSync(path, 'utf8'));
+            if (dados.total === 0) { console.log('Nenhuma pesquisa nova.'); return; }
+
+            // ── Montar corpo da issue ──
+            let body = `## 🆕 ${dados.total} nova(s) pesquisa(s) presidencial(is) registrada(s) no TSE\n\n`;
+            body += `**Data de verificação:** ${dados.data}\n\n`;
+
+            for (const p of dados.novas) {
+              body += `### ${p.instituto}\n`;
+              body += `| Campo | Valor |\n|---|---|\n`;
+              body += `| Protocolo | \`${p.protocolo}\` |\n`;
+              body += `| Registro TSE | ${p.registro} |\n`;
+              body += `| Campo | ${p.campo_inicio} → ${p.campo_fim} |\n`;
+              body += `| Divulgação | ${p.divulgacao} |\n`;
+              body += `| Amostra | ${p.amostra?.toLocaleString('pt-BR') ?? '—'} entrevistados |\n`;
+              body += `| Custo | ${p.custo ? 'R$ ' + p.custo.toLocaleString('pt-BR', {minimumFractionDigits:0}) : 'não informado'} |\n`;
+              body += `| Metodologia | ${p.metodologia} |\n`;
+              body += `| Instituto reconhecido | ${p.conhecido ? '✅ sim' : '⚠️ não — verificar manualmente'} |\n`;
+              body += '\n';
+            }
+
+            body += `---\n*Gerado automaticamente pelo agente de monitoramento TSE.*`;
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo:  context.repo.repo,
+              title: `[TSE] ${dados.total} nova(s) pesquisa(s) — ${dados.data}`,
+              body,
+              labels: ['pesquisa-nova'],
+            });
+
+      # 7. Enviar e-mail de notificação (via Gmail SMTP)
+      - name: Enviar e-mail
+        if: steps.monitor.outputs.tem_novas == '1'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port:    465
+          secure:         true
+          username:       ${{ secrets.EMAIL_USUARIO }}
+          password:       ${{ secrets.EMAIL_SENHA }}
+          to:             ${{ secrets.EMAIL_DESTINO }}
+          from:           Monitor TSE 2026
+          subject:        "[TSE] Nova pesquisa presidencial detectada"
+          body: |
+            O agente de monitoramento detectou novas pesquisas presidenciais registradas no TSE.
+
+            Acesse o repositório para ver os detalhes:
+            https://github.com/${{ github.repository }}/issues
+
+            Data: ${{ env.HOJE }}
