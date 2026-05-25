@@ -13,21 +13,17 @@ jobs:
       issues: write
 
     steps:
-      # 1. Baixar o código do repositório
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 2. Configurar Python
       - name: Python 3.12
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      # 3. Instalar dependências
       - name: Instalar dependências
         run: pip install pandas requests
 
-      # 4. Rodar o agente
       - name: Rodar monitor
         id: monitor
         run: |
@@ -35,16 +31,62 @@ jobs:
           echo "tem_novas=$?" >> $GITHUB_OUTPUT
         continue-on-error: true
 
-      # 5. Commitar arquivos gerados (snapshot, histórico, relatório, JSON)
+      - name: Gerar alerta.txt
+        run: |
+          TODAY=$(date +'%Y-%m-%d')
+          JSON_FILE="data/novas_${TODAY}.json"
+
+          python3 << PYEOF
+          import json, os
+          from datetime import date
+
+          json_file = f"data/novas_{date.today()}.json"
+
+          if not os.path.exists(json_file):
+              txt = "Nenhuma pesquisa nova hoje."
+          else:
+              with open(json_file) as f:
+                  dados = json.load(f)
+
+              if dados["total"] == 0:
+                  txt = f"[{dados['data']}] Nenhuma pesquisa nova hoje."
+              else:
+                  linhas = []
+                  linhas.append("=" * 60)
+                  linhas.append(f"MONITOR TSE — {dados['data']}")
+                  linhas.append(f"{dados['total']} NOVA(S) PESQUISA(S) PRESIDENCIAL(IS)")
+                  linhas.append("=" * 60)
+                  linhas.append("")
+
+                  for p in dados["novas"]:
+                      linhas.append(f"INSTITUTO:   {p['instituto']}")
+                      linhas.append(f"PROTOCOLO:   {p['protocolo']}")
+                      linhas.append(f"CAMPO:       {p['campo_inicio']} até {p['campo_fim']}")
+                      linhas.append(f"DIVULGAÇÃO:  {p['divulgacao']}")
+                      n = p.get("amostra")
+                      linhas.append(f"AMOSTRA:     {f'{n:,}'.replace(',', '.') if n else '—'} entrevistados")
+                      linhas.append(f"METODOLOGIA: {p['metodologia']}")
+                      linhas.append(f"INSTITUTO:   {'Reconhecido' if p.get('conhecido') else 'NOVO — verificar manualmente'}")
+                      linhas.append("-" * 60)
+                      linhas.append("")
+
+                  linhas.append("Acesse o repositório para ver o relatório completo.")
+                  txt = "\n".join(linhas)
+
+          with open("alerta.txt", "w", encoding="utf-8") as f:
+              f.write(txt)
+
+          print(txt)
+          PYEOF
+
       - name: Salvar resultados no repositório
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/ relatorio_*.md
+          git add data/ relatorio_*.md alerta.txt
           git diff --cached --quiet || git commit -m "monitor: snapshot $(date +'%Y-%m-%d')"
           git push
 
-      # 6. Abrir Issue se há pesquisas novas
       - name: Abrir Issue com novas pesquisas
         if: steps.monitor.outputs.tem_novas == '1'
         uses: actions/github-script@v7
@@ -59,9 +101,8 @@ jobs:
             const dados = JSON.parse(fs.readFileSync(path, 'utf8'));
             if (dados.total === 0) { console.log('Nenhuma pesquisa nova.'); return; }
 
-            // ── Montar corpo da issue ──
             let body = `## 🆕 ${dados.total} nova(s) pesquisa(s) presidencial(is) registrada(s) no TSE\n\n`;
-            body += `**Data de verificação:** ${dados.data}\n\n`;
+            body += `**Data:** ${dados.data}\n\n`;
 
             for (const p of dados.novas) {
               body += `### ${p.instituto}\n`;
@@ -70,14 +111,13 @@ jobs:
               body += `| Registro TSE | ${p.registro} |\n`;
               body += `| Campo | ${p.campo_inicio} → ${p.campo_fim} |\n`;
               body += `| Divulgação | ${p.divulgacao} |\n`;
-              body += `| Amostra | ${p.amostra?.toLocaleString('pt-BR') ?? '—'} entrevistados |\n`;
-              body += `| Custo | ${p.custo ? 'R$ ' + p.custo.toLocaleString('pt-BR', {minimumFractionDigits:0}) : 'não informado'} |\n`;
+              const n = p.amostra;
+              body += `| Amostra | ${n ? n.toLocaleString('pt-BR') : '—'} entrevistados |\n`;
               body += `| Metodologia | ${p.metodologia} |\n`;
-              body += `| Instituto reconhecido | ${p.conhecido ? '✅ sim' : '⚠️ não — verificar manualmente'} |\n`;
-              body += '\n';
+              body += `| Instituto | ${p.conhecido ? '✅ Reconhecido' : '⚠️ Novo — verificar manualmente'} |\n\n`;
             }
 
-            body += `---\n*Gerado automaticamente pelo agente de monitoramento TSE.*`;
+            body += `---\n*Gerado automaticamente pelo monitor TSE.*`;
 
             await github.rest.issues.create({
               owner: context.repo.owner,
@@ -86,24 +126,3 @@ jobs:
               body,
               labels: ['pesquisa-nova'],
             });
-
-      # 7. Enviar e-mail de notificação (via Gmail SMTP)
-      - name: Enviar e-mail
-        if: steps.monitor.outputs.tem_novas == '1'
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port:    465
-          secure:         true
-          username:       ${{ secrets.EMAIL_USUARIO }}
-          password:       ${{ secrets.EMAIL_SENHA }}
-          to:             ${{ secrets.EMAIL_DESTINO }}
-          from:           Monitor TSE 2026
-          subject:        "[TSE] Nova pesquisa presidencial detectada"
-          body: |
-            O agente de monitoramento detectou novas pesquisas presidenciais registradas no TSE.
-
-            Acesse o repositório para ver os detalhes:
-            https://github.com/${{ github.repository }}/issues
-
-            Data: ${{ env.HOJE }}
