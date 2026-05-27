@@ -4,7 +4,7 @@
 |---|---|
 | Total registradas (cargo=Presidente) | **308** |
 | Aprovadas para o agregador | **84** |
-| Novas detectadas hoje | **0** |
+| Novas detectadas hoje | **1** |
 
 ## 📊 Classificação
 
@@ -15,7 +15,24 @@
 | ⚠️ Inconclusiva | 25 | n>1.000 + sem padrão nos campos |
 | ❌ Excluída — amostra | 57 | n ≤ 1.000 |
 
-## ✅ Nenhuma pesquisa nova hoje
+## 🆕 Novas pesquisas detectadas
+
+### ✅ PODERDATA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR048822026` |
+| Registro TSE | 2026-05-23 |
+| Campo | 2026-05-25 → 2026-05-28 (3 dias) |
+| Divulgação | 2026-05-29 |
+| Amostra | 2,400 entrevistados |
+| Custo | R$ 103,715 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2400) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
 
 ## 📅 Divulgações futuras
 
@@ -219,4 +236,4 @@
 | Quaest | 2026-01-11 | 2,004 | URA |
 
 ---
-*Gerado em 27/05/2026 15:44*
+*Gerado em 27/05/2026 15:48*

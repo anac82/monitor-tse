@@ -1,5 +1,23 @@
 {
   "data": "2026-05-27",
-  "total": 0,
-  "novas": []
+  "total": 1,
+  "novas": [
+    {
+      "protocolo": "BR048822026",
+      "instituto": "PODERDATA",
+      "tse_registro": "2026-05-23",
+      "campo_inicio": "2026-05-25",
+      "campo_fim": "2026-05-28",
+      "divulgacao": "2026-05-29",
+      "amostra": 2400,
+      "custo_reais": 103715.0,
+      "metodologia": "URA",
+      "status": "1_APROVADA",
+      "usa_no_agregador": true,
+      "flag_amostra_ok": true,
+      "flag_nacional_explicito": true,
+      "flag_estadual_explicito": false,
+      "flag_instituto_conhecido": true
+    }
+  ]
 }

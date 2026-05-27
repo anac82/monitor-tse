@@ -1,1 +1,17 @@
-[2026-05-27] Nenhuma pesquisa nova hoje.
+============================================================
+MONITOR TSE — 2026-05-27
+1 NOVA(S) PESQUISA(S) PRESIDENCIAL(IS)
+============================================================
+
+INSTITUTO:   PODERDATA
+PROTOCOLO:   BR048822026
+CAMPO:       2026-05-25 até 2026-05-28
+DIVULGAÇÃO:  2026-05-29
+AMOSTRA:     2.400 entrevistados
+CUSTO:       R$ 103.715
+METODOLOGIA: URA
+STATUS:      1_APROVADA
+AGREGADOR:   SIM
+------------------------------------------------------------
+
+Veja o relatório completo no repositório.
