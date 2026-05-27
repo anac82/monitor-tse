@@ -515,7 +515,54 @@ def gerar_alerta_txt(novas: pd.DataFrame) -> None:
     log.info(f"  Alerta: {p.name}")
 
 
-# ─── 10. Pipeline principal ───────────────────────────────────────────────────
+# ─── 10. Buscar protocolos já coletados no agregador ─────────────────────────
+
+def protocolos_no_agregador() -> set:
+    """
+    Baixa o pesquisas_manuais.csv do repositório do agregador via GitHub API
+    e retorna o conjunto de protocolos TSE já coletados.
+    Retorna conjunto vazio se não conseguir acessar.
+    """
+    import os, base64, urllib.request
+
+    token = os.environ.get("AGREGADOR_TOKEN", "")
+    if not token:
+        log.warning("  AGREGADOR_TOKEN não definido — pulando verificação no agregador")
+        return set()
+
+    owner = "anac82"
+    repo  = "agregador-pesquisas"
+    path  = "data/pesquisas_manuais.csv"
+    url   = f"https://api.github.com/repos/{owner}/{repo}/contents/{path}"
+
+    try:
+        headers = {
+            "Authorization": f"Bearer {token}",
+            "Accept": "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+        }
+        req = urllib.request.Request(url, headers=headers)
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            data    = json.loads(resp.read())
+            conteudo = base64.b64decode(data["content"]).decode("utf-8")
+
+        # Parsear CSV em memória
+        import csv, io
+        reader   = csv.DictReader(io.StringIO(conteudo))
+        protos   = {
+            r["registro_tse"].strip()
+            for r in reader
+            if r.get("registro_tse", "").strip()
+        }
+        log.info(f"  Agregador: {len(protos)} protocolos já coletados")
+        return protos
+
+    except Exception as e:
+        log.warning(f"  Não foi possível acessar o agregador: {e}")
+        return set()
+
+
+# ─── 11. Pipeline principal ───────────────────────────────────────────────────
 
 def main() -> int:
     log.info(f"========== Monitor TSE — {HOJE} ==========")
@@ -527,16 +574,36 @@ def main() -> int:
 
     salvar_snapshot(df)
 
+    # ── Detectar pesquisas novas no TSE (não vistas antes) ────────────────────
     vistos = protocolos_vistos()
     novas  = detectar_novas(df, vistos)
-
     atualizar_historico(df)
-    salvar_json(novas)
+
+    # ── Detectar pesquisas pendentes: aprovadas mas sem dados no agregador ────
+    # Uma pesquisa é "pendente" quando:
+    #   1. Está aprovada (usa_no_agregador=True)
+    #   2. NÃO está no pesquisas_manuais.csv do agregador
+    # Isso cobre tanto pesquisas novas quanto pesquisas antigas nunca coletadas.
+    protos_agregador = protocolos_no_agregador()
+
+    todas_aprovadas = df[df["usa_no_agregador"]].drop_duplicates("NR_PROTOCOLO_REGISTRO")
+    pendentes = todas_aprovadas[
+        ~todas_aprovadas["NR_PROTOCOLO_REGISTRO"].astype(str).isin(protos_agregador)
+    ].copy()
+
+    log.info(f"  Pesquisas aprovadas no TSE: {len(todas_aprovadas)}")
+    log.info(f"  Pendentes (aprovadas mas sem dados no agregador): {len(pendentes)}")
+
+    # ── Salvar JSON: novas no TSE + pendentes no agregador ────────────────────
+    # O JSON contém as pendentes (o que o workflow usa para Issue e pendentes.md)
+    salvar_json(pendentes)
     gerar_relatorio(df, novas)
-    gerar_alerta_txt(novas)
+    gerar_alerta_txt(pendentes)
 
     log.info("========== Concluído ==========")
-    return 1 if len(novas) > 0 else 0
+
+    # exit 1 se há pendentes (dispara Issue e atualização do agregador)
+    return 1 if len(pendentes) > 0 else 0
 
 
 if __name__ == "__main__":
