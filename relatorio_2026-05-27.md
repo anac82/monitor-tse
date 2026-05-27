@@ -4,7 +4,7 @@
 |---|---|
 | Total registradas (cargo=Presidente) | **308** |
 | Aprovadas para o agregador | **84** |
-| Novas detectadas hoje | **12** |
+| Novas detectadas hoje | **0** |
 
 ## 📊 Classificação
 
@@ -15,211 +15,7 @@
 | ⚠️ Inconclusiva | 25 | n>1.000 + sem padrão nos campos |
 | ❌ Excluída — amostra | 57 | n ≤ 1.000 |
 
-## 🆕 Novas pesquisas detectadas
-
-### ❌ VERITA
-| Campo | Valor |
-|---|---|
-| Protocolo | `BR040702026` |
-| Registro TSE | 2026-05-26 |
-| Campo | 2026-05-27 → 2026-05-31 (4 dias) |
-| Divulgação | 2026-06-01 |
-| Amostra | 2,020 entrevistados |
-| Custo | R$ 155,540 |
-| Metodologia | URA |
-| flag_amostra_ok | ✅ (n=2020) |
-| flag_nacional_explicito | ❌ |
-| flag_estadual_explicito | ✅ sim |
-| flag_instituto_conhecido | ⚠️ novo |
-| **status** | `2_EXCLUIDA_ESTADUAL` |
-| **usa_no_agregador** | ❌ **não** |
-
-### ❌ VERITA
-| Campo | Valor |
-|---|---|
-| Protocolo | `BR098982026` |
-| Registro TSE | 2026-05-26 |
-| Campo | 2026-05-27 → 2026-05-31 (4 dias) |
-| Divulgação | 2026-06-01 |
-| Amostra | 1,525 entrevistados |
-| Custo | R$ 117,425 |
-| Metodologia | URA |
-| flag_amostra_ok | ✅ (n=1525) |
-| flag_nacional_explicito | ❌ |
-| flag_estadual_explicito | ✅ sim |
-| flag_instituto_conhecido | ⚠️ novo |
-| **status** | `2_EXCLUIDA_ESTADUAL` |
-| **usa_no_agregador** | ❌ **não** |
-
-### ❌ VERITA
-| Campo | Valor |
-|---|---|
-| Protocolo | `BR021802026` |
-| Registro TSE | 2026-05-26 |
-| Campo | 2026-05-27 → 2026-05-31 (4 dias) |
-| Divulgação | 2026-06-01 |
-| Amostra | 1,525 entrevistados |
-| Custo | R$ 117,425 |
-| Metodologia | URA |
-| flag_amostra_ok | ✅ (n=1525) |
-| flag_nacional_explicito | ❌ |
-| flag_estadual_explicito | ✅ sim |
-| flag_instituto_conhecido | ⚠️ novo |
-| **status** | `2_EXCLUIDA_ESTADUAL` |
-| **usa_no_agregador** | ❌ **não** |
-
-### ✅ REAL TIME BIG DATA
-| Campo | Valor |
-|---|---|
-| Protocolo | `BR058642026` |
-| Registro TSE | 2026-05-26 |
-| Campo | 2026-05-29 → 2026-05-30 (1 dias) |
-| Divulgação | 2026-06-01 |
-| Amostra | 2,000 entrevistados |
-| Custo | R$ 80,000 |
-| Metodologia | URA |
-| flag_amostra_ok | ✅ (n=2000) |
-| flag_nacional_explicito | ✅ |
-| flag_estadual_explicito | ❌ |
-| flag_instituto_conhecido | ✅ |
-| **status** | `1_APROVADA` |
-| **usa_no_agregador** | ✅ **sim** |
-
-### ✅ AGORASEI PESQUISA
-| Campo | Valor |
-|---|---|
-| Protocolo | `BR056712026` |
-| Registro TSE | 2026-05-26 |
-| Campo | 2026-05-28 → 2026-05-31 (3 dias) |
-| Divulgação | 2026-06-01 |
-| Amostra | 1,500 entrevistados |
-| Custo | R$ 30,000 |
-| Metodologia | URA |
-| flag_amostra_ok | ✅ (n=1500) |
-| flag_nacional_explicito | ✅ |
-| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
-| flag_instituto_conhecido | ⚠️ novo |
-| **status** | `1_APROVADA` |
-| **usa_no_agregador** | ✅ **sim** |
-
-### ❌ VERITA
-| Campo | Valor |
-|---|---|
-| Protocolo | `BR054992026` |
-| Registro TSE | 2026-05-26 |
-| Campo | 2026-05-27 → 2026-05-31 (4 dias) |
-| Divulgação | 2026-06-01 |
-| Amostra | 1,220 entrevistados |
-| Custo | R$ 93,940 |
-| Metodologia | URA |
-| flag_amostra_ok | ✅ (n=1220) |
-| flag_nacional_explicito | ❌ |
-| flag_estadual_explicito | ✅ sim |
-| flag_instituto_conhecido | ⚠️ novo |
-| **status** | `2_EXCLUIDA_ESTADUAL` |
-| **usa_no_agregador** | ❌ **não** |
-
-### ❌ VERITA
-| Campo | Valor |
-|---|---|
-| Protocolo | `BR004002026` |
-| Registro TSE | 2026-05-26 |
-| Campo | 2026-05-27 → 2026-05-31 (4 dias) |
-| Divulgação | 2026-06-01 |
-| Amostra | 1,525 entrevistados |
-| Custo | R$ 117,425 |
-| Metodologia | URA |
-| flag_amostra_ok | ✅ (n=1525) |
-| flag_nacional_explicito | ❌ |
-| flag_estadual_explicito | ✅ sim |
-| flag_instituto_conhecido | ⚠️ novo |
-| **status** | `2_EXCLUIDA_ESTADUAL` |
-| **usa_no_agregador** | ❌ **não** |
-
-### ❌ VERITA
-| Campo | Valor |
-|---|---|
-| Protocolo | `BR063602026` |
-| Registro TSE | 2026-05-26 |
-| Campo | 2026-05-27 → 2026-05-31 (4 dias) |
-| Divulgação | 2026-06-01 |
-| Amostra | 1,030 entrevistados |
-| Custo | R$ 79,310 |
-| Metodologia | URA |
-| flag_amostra_ok | ✅ (n=1030) |
-| flag_nacional_explicito | ❌ |
-| flag_estadual_explicito | ✅ sim |
-| flag_instituto_conhecido | ⚠️ novo |
-| **status** | `2_EXCLUIDA_ESTADUAL` |
-| **usa_no_agregador** | ❌ **não** |
-
-### ❌ VERITA
-| Campo | Valor |
-|---|---|
-| Protocolo | `BR054032026` |
-| Registro TSE | 2026-05-26 |
-| Campo | 2026-05-27 → 2026-05-31 (4 dias) |
-| Divulgação | 2026-06-01 |
-| Amostra | 2,030 entrevistados |
-| Custo | R$ 156,310 |
-| Metodologia | URA |
-| flag_amostra_ok | ✅ (n=2030) |
-| flag_nacional_explicito | ❌ |
-| flag_estadual_explicito | ✅ sim |
-| flag_instituto_conhecido | ⚠️ novo |
-| **status** | `2_EXCLUIDA_ESTADUAL` |
-| **usa_no_agregador** | ❌ **não** |
-
-### ❌ VERITA
-| Campo | Valor |
-|---|---|
-| Protocolo | `BR003452026` |
-| Registro TSE | 2026-05-26 |
-| Campo | 2026-05-27 → 2026-05-31 (4 dias) |
-| Divulgação | 2026-06-01 |
-| Amostra | 1,220 entrevistados |
-| Custo | R$ 93,940 |
-| Metodologia | URA |
-| flag_amostra_ok | ✅ (n=1220) |
-| flag_nacional_explicito | ❌ |
-| flag_estadual_explicito | ✅ sim |
-| flag_instituto_conhecido | ⚠️ novo |
-| **status** | `2_EXCLUIDA_ESTADUAL` |
-| **usa_no_agregador** | ❌ **não** |
-
-### ❌ VERITA
-| Campo | Valor |
-|---|---|
-| Protocolo | `BR002092026` |
-| Registro TSE | 2026-05-26 |
-| Campo | 2026-05-27 → 2026-05-31 (4 dias) |
-| Divulgação | 2026-06-01 |
-| Amostra | 1,220 entrevistados |
-| Custo | R$ 93,940 |
-| Metodologia | URA |
-| flag_amostra_ok | ✅ (n=1220) |
-| flag_nacional_explicito | ❌ |
-| flag_estadual_explicito | ✅ sim |
-| flag_instituto_conhecido | ⚠️ novo |
-| **status** | `2_EXCLUIDA_ESTADUAL` |
-| **usa_no_agregador** | ❌ **não** |
-
-### ✅ #NULO#
-| Campo | Valor |
-|---|---|
-| Protocolo | `BR095392026` |
-| Registro TSE | 2026-05-25 |
-| Campo | 2026-05-27 → 2026-05-29 (2 dias) |
-| Divulgação | 2026-05-31 |
-| Amostra | 2,100 entrevistados |
-| Custo | R$ 50,000 |
-| Metodologia | URA |
-| flag_amostra_ok | ✅ (n=2100) |
-| flag_nacional_explicito | ✅ |
-| flag_estadual_explicito | ❌ |
-| flag_instituto_conhecido | ⚠️ novo |
-| **status** | `1_APROVADA` |
-| **usa_no_agregador** | ✅ **sim** |
+## ✅ Nenhuma pesquisa nova hoje
 
 ## 📅 Divulgações futuras
 
@@ -228,15 +24,15 @@
 | ATLASINTEL | 2026-05-22 → 2026-05-27 | 2026-05-28 | 1,000 | `4_EXCLUIDA_AMOSTRA (n=1000)` |
 | BOAS IDEIAS, ESTRATEGIA E INTELIGENCIA DIGITAL. | 2026-05-23 → 2026-05-27 | 2026-05-28 | 1,500 | `1_APROVADA` |
 | BOAS IDEIAS, ESTRATEGIA E INTELIGENCIA DIGITAL. | 2026-05-23 → 2026-05-27 | 2026-05-28 | 1,000 | `4_EXCLUIDA_AMOSTRA (n=1000)` |
-| #NULO# | 2026-05-25 → 2026-05-27 | 2026-05-28 | 1,022 | `2_EXCLUIDA_ESTADUAL` |
+| Datafolha | 2026-05-25 → 2026-05-27 | 2026-05-28 | 1,022 | `2_EXCLUIDA_ESTADUAL` |
 | ITEM PESQUISAS TECNICAS | 2026-05-18 → 2026-05-22 | 2026-05-29 | 1,250 | `1_APROVADA` |
 | VERITA | 2026-05-22 → 2026-05-26 | 2026-05-29 | 2,020 | `2_EXCLUIDA_ESTADUAL` |
 | PODERDATA | 2026-05-25 → 2026-05-28 | 2026-05-29 | 2,400 | `1_APROVADA` |
 | MEDIA - INTELIGENCIA EM PESQUISA | 2026-05-21 → 2026-05-27 | 2026-05-29 | 2,000 | `1_APROVADA` |
-| #NULO# | 2026-05-26 → 2026-05-28 | 2026-05-30 | 1,480 | `2_EXCLUIDA_ESTADUAL` |
+| Vox Brasil | 2026-05-26 → 2026-05-28 | 2026-05-30 | 1,480 | `2_EXCLUIDA_ESTADUAL` |
 | INSTITUTO OPINIAO | 2026-05-25 → 2026-05-27 | 2026-05-30 | 1,000 | `4_EXCLUIDA_AMOSTRA (n=1000)` |
 | ANOVA INSTITUTO DE PESQUISA | 2026-05-25 → 2026-05-27 | 2026-05-30 | 2,000 | `2_EXCLUIDA_ESTADUAL` |
-| #NULO# | 2026-05-27 → 2026-05-29 | 2026-05-31 | 2,100 | `1_APROVADA` |
+| Vox Brasil | 2026-05-27 → 2026-05-29 | 2026-05-31 | 2,100 | `1_APROVADA` |
 | INSTITUTO SETA DE PESQUISA | 2026-05-26 → 2026-05-28 | 2026-05-31 | 1,500 | `2_EXCLUIDA_ESTADUAL` |
 | AGORASEI PESQUISA | 2026-05-28 → 2026-05-31 | 2026-06-01 | 1,500 | `1_APROVADA` |
 | VERITA | 2026-05-27 → 2026-05-31 | 2026-06-01 | 1,220 | `2_EXCLUIDA_ESTADUAL` |
@@ -250,13 +46,96 @@
 | VERITA | 2026-05-27 → 2026-05-31 | 2026-06-01 | 1,220 | `2_EXCLUIDA_ESTADUAL` |
 | VERITA | 2026-05-27 → 2026-05-31 | 2026-06-01 | 2,020 | `2_EXCLUIDA_ESTADUAL` |
 
+## 💰 Custo das pesquisas por instituto (acumulado 2026)
+
+| Instituto | Pesquisas | Custo total (R$) | Custo médio (R$) | R$/entrevistado |
+|-----------|-----------|-----------------|-----------------|----------------|
+| VERITA | 50 | 8,902,505 | 178,050 | 76.02 |
+| Quaest | 18 | 5,138,853 | 285,492 | 204.95 |
+| REAL TIME BIG DATA | 27 | 1,924,000 | 71,259 | 40.00 |
+| Datafolha | 9 | 1,847,873 | 205,319 | 136.82 |
+| 100 CIDADES | 17 | 1,807,000 | 106,294 | 79.25 |
+| Paraná Pesquisas | 20 | 1,415,300 | 70,765 | 45.68 |
+| ATLASINTEL | 16 | 1,185,000 | 74,062 | 27.69 |
+| NEXUS | 3 | 494,667 | 164,889 | 82.44 |
+| Vetor | 3 | 454,580 | 151,527 | 20.00 |
+| JOTA JORNALISMO | 3 | 330,000 | 110,000 | 20.62 |
+| Vox Brasil | 6 | 265,000 | 44,167 | 25.33 |
+| MDA | 1 | 230,038 | 230,038 | 114.90 |
+| BOAS IDEIAS, ESTRATEGIA E INTELIGENCIA DIGITAL. | 7 | 221,553 | 31,650 | 21.10 |
+| AMOSTRAGEM OPINIAO E MERCADO | 11 | 191,500 | 17,409 | 32.26 |
+| Data Tempo | 1 | 170,000 | 170,000 | 85.00 |
+| INDEXA PESQUISAS | 1 | 164,000 | 164,000 | 82.00 |
+| DOXA | 3 | 135,000 | 45,000 | 26.66 |
+| INSTITUTO SETA DE PESQUISA | 9 | 124,000 | 13,778 | 9.96 |
+| VETOR TECNOLOGIA E PESQUISAS | 3 | 118,000 | 39,333 | 23.65 |
+| NEOKEMP PESQUISAS | 3 | 115,000 | 38,333 | 38.03 |
+| PODERDATA | 1 | 103,715 | 103,715 | 43.21 |
+| Colectta | 1 | 92,000 | 92,000 | 45.91 |
+| IPEC | 1 | 90,000 | 90,000 | 112.50 |
+| RANKING BRASIL INTELIGENCIA | 5 | 90,000 | 18,000 | 10.00 |
+| GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT | 4 | 82,500 | 20,625 | 10.31 |
+| DATATRENDS | 3 | 80,000 | 26,667 | 12.50 |
+| ECONOMETRICA PESQUISA | 2 | 80,000 | 40,000 | 25.29 |
+| Ipespe | 1 | 80,000 | 80,000 | 53.33 |
+| DELTA AGENCIA DE PESQUISA | 3 | 77,000 | 25,667 | 27.38 |
+| INSTITUTO OPINIAO | 1 | 76,000 | 76,000 | 76.00 |
+| DATA POVO CONSULTORIA | 1 | 68,000 | 68,000 | 52.31 |
+| AFFARE INSTITUTE | 3 | 67,500 | 22,500 | 15.00 |
+| DATA CONTROL INSTITUTO DE PESQUISA | 3 | 65,000 | 21,667 | 23.60 |
+| PERCENT PESQUISA DE MERCADO E OPINIAO | 2 | 60,000 | 30,000 | 25.00 |
+| INSTITUTO GP1 DE PESQUISA | 1 | 60,000 | 60,000 | 52.77 |
+| IPEN - INSTITUTO DE PESQUISA DO NORTE | 1 | 60,000 | 60,000 | 50.00 |
+| METADATA | 2 | 60,000 | 30,000 | 23.53 |
+| VERITATE | 1 | 60,000 | 60,000 | 40.00 |
+| MAPA MARKETING E PARTICIPACOES LTDA | 1 | 54,000 | 54,000 | 53.57 |
+| VERITAS PLANEJAMENTO | 1 | 50,000 | 50,000 | 50.00 |
+| Perfil Pesquisas | 2 | 50,000 | 25,000 | 20.80 |
+| ALFA INTELIGENCIA | 1 | 50,000 | 50,000 | 50.00 |
+| INSTITUTO PHOENIX & ASSOCIADOS | 5 | 45,250 | 9,050 | 8.35 |
+| OPINIAO PESQUISAS SOCIAIS | 1 | 45,000 | 45,000 | 22.50 |
+| ECM-PESQUISAS | 4 | 45,000 | 11,250 | 9.38 |
+| INSTITUTO DE PESQUISA MULTIPLA | 3 | 45,000 | 15,000 | 17.51 |
+| ANOVA INSTITUTO DE PESQUISA | 3 | 42,000 | 14,000 | 7.00 |
+| MEDIA - INTELIGENCIA EM PESQUISA | 2 | 41,000 | 20,500 | 0.00 |
+| SECULUS CONSULTORIA E ASSESSORIA LTDA | 1 | 40,000 | 40,000 | 26.06 |
+| QUALITTA EMPREENDIMENTOS | 2 | 40,000 | 20,000 | 16.67 |
+| INSTITUTO FRANCA DE PESQUISA PESQUISA E ASSESSORIA | 3 | 40,000 | 13,333 | 11.46 |
+| DIRETO AO PONTO PESQUISAS | 1 | 35,500 | 35,500 | 29.58 |
+| CONSULT PESQUISA | 1 | 35,000 | 35,000 | 20.59 |
+| OPNUS | 1 | 35,000 | 35,000 | 31.82 |
+| BRASMARKET | 1 | 35,000 | 35,000 | 29.17 |
+| AGORASEI PESQUISA | 1 | 30,000 | 30,000 | 20.00 |
+| NOVO IBRAPE | 2 | 30,000 | 15,000 | 15.00 |
+| EXATUS CONSULTORIA E PESQUISA | 1 | 30,000 | 30,000 | 19.76 |
+| PERFIL PESQUISAS | 1 | 26,000 | 26,000 | 24.34 |
+| INSTITUTO DE PESQUISA RESULTADO IPR | 2 | 25,000 | 12,500 | 15.94 |
+| CEPPHOR | 1 | 20,000 | 20,000 | 50.00 |
+| INSTITUTO DATASENSUS | 1 | 20,000 | 20,000 | 25.00 |
+| INSTITUTO AMAZONIA DE PESQUISA - IAP | 1 | 19,000 | 19,000 | 11.88 |
+| BADRA COMUNICACAO | 2 | 16,000 | 8,000 | 3.56 |
+| PARLA MENTORS CONSULTORIA | 2 | 16,000 | 8,000 | 20.00 |
+| ITEM PESQUISAS TECNICAS | 1 | 15,000 | 15,000 | 12.00 |
+| FACTUM COMUNICACAO | 1 | 15,000 | 15,000 | 30.00 |
+| Datapress | 1 | 15,000 | 15,000 | 24.96 |
+| IPSENSUS PESQUISAS | 2 | 14,000 | 7,000 | 7.37 |
+| INSTITUTO DE PESQUISA DATA AZ | 2 | 10,500 | 5,250 | 8.75 |
+| DATA CENSUS LTDA | 1 | 10,000 | 10,000 | 5.00 |
+| INSTITUTO DIVULGA | 1 | 8,000 | 8,000 | 26.49 |
+| DATA MAX | 1 | 5,000 | 5,000 | 10.00 |
+| VIAVOX CONSULTORIA ADMINISTRATIVA E PESQUISAS DE OPINIAO LTDA | 1 | 5,000 | 5,000 | 12.50 |
+| IGAPE- INSTITUTO GAZETA DE PEQUISAS | 1 | 5,000 | 5,000 | 4.17 |
+| MORAIS & DIAS INSTITUTO DE OPINI O P BLICA LTDA  - ME | 1 | 4,000 | 4,000 | 12.82 |
+| INSTITUTO ESTIMATIVA | 1 | 2,500 | 2,500 | 8.31 |
+| **TOTAL** | **308** | **27,654,334** | — | — |
+
 ## ✅ Pesquisas aprovadas para o agregador
 
 | Instituto | Campo fim | Amostra | Metodologia |
 |-----------|-----------|---------|-------------|
 | AGORASEI PESQUISA | 2026-05-31 | 1,500 | URA |
 | REAL TIME BIG DATA | 2026-05-30 | 2,000 | URA |
-| #NULO# | 2026-05-29 | 2,100 | URA |
+| Vox Brasil | 2026-05-29 | 2,100 | URA |
 | PODERDATA | 2026-05-28 | 2,400 | URA |
 | BOAS IDEIAS, ESTRATEGIA E INTELIGENCIA DIGITAL. | 2026-05-27 | 1,500 | URA |
 | MEDIA - INTELIGENCIA EM PESQUISA | 2026-05-27 | 2,000 | URA |
@@ -265,19 +144,19 @@
 | JOTA JORNALISMO | 2026-05-23 | 6,000 | URA |
 | GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT | 2026-05-22 | 2,000 | presencial |
 | ITEM PESQUISAS TECNICAS | 2026-05-22 | 1,250 | URA |
-| #NULO# | 2026-05-22 | 2,004 | URA |
+| Datafolha | 2026-05-22 | 2,004 | URA |
 | 100 CIDADES | 2026-05-21 | 2,000 | URA |
 | INSTITUTO DE PESQUISA MULTIPLA | 2026-05-20 | 1,070 | URA |
-| #NULO# | 2026-05-19 | 2,100 | URA |
-| #NULO# | 2026-05-19 | 9,000 | URA |
+| Vox Brasil | 2026-05-19 | 2,100 | URA |
+| Vetor | 2026-05-19 | 9,000 | URA |
 | ATLASINTEL | 2026-05-18 | 5,000 | URA |
 | QUALITTA EMPREENDIMENTOS | 2026-05-14 | 1,200 | URA |
-| #NULO# | 2026-05-14 | 2,004 | URA |
+| Datafolha | 2026-05-14 | 2,004 | URA |
 | IPSENSUS PESQUISAS | 2026-05-13 | 1,500 | URA |
-| #NULO# | 2026-05-12 | 2,100 | URA |
-| #NULO# | 2026-05-11 | 2,004 | URA |
+| Vox Brasil | 2026-05-12 | 2,100 | URA |
+| Quaest | 2026-05-11 | 2,004 | URA |
 | GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT | 2026-05-11 | 2,000 | presencial |
-| #NULO# | 2026-05-09 | 1,200 | URA |
+| Vox Brasil | 2026-05-09 | 1,200 | URA |
 | 100 CIDADES | 2026-05-08 | 2,000 | URA |
 | INSTITUTO PHOENIX & ASSOCIADOS | 2026-05-06 | 1,203 | URA |
 | BOAS IDEIAS, ESTRATEGIA E INTELIGENCIA DIGITAL. | 2026-05-05 | 1,500 | URA |
@@ -289,19 +168,19 @@
 | NEXUS | 2026-04-26 | 2,000 | URA |
 | DATATRENDS | 2026-04-23 | 1,200 | URA |
 | EXATUS CONSULTORIA E PESQUISA | 2026-04-17 | 1,518 | URA |
-| #NULO# | 2026-04-16 | 1,800 | URA |
-| #NULO# | 2026-04-13 | 2,004 | URA |
-| #NULO# | 2026-04-12 | 2,002 | URA |
+| Perfil Pesquisas | 2026-04-16 | 1,800 | URA |
+| Quaest | 2026-04-13 | 2,004 | URA |
+| MDA | 2026-04-12 | 2,002 | URA |
 | 100 CIDADES | 2026-04-11 | 2,000 | URA |
 | AFFARE INSTITUTE | 2026-04-11 | 1,500 | URA |
 | INSTITUTO GP1 DE PESQUISA | 2026-04-10 | 1,137 | URA |
-| #NULO# | 2026-04-09 | 2,004 | URA |
+| Datafolha | 2026-04-09 | 2,004 | URA |
 | INSTITUTO FRANCA DE PESQUISA PESQUISA E ASSESSORIA | 2026-04-08 | 1,200 | URA |
 | BOAS IDEIAS, ESTRATEGIA E INTELIGENCIA DIGITAL. | 2026-04-07 | 1,500 | URA |
 | VERITA | 2026-04-04 | 40,500 | URA |
 | JOTA JORNALISMO | 2026-03-30 | 5,000 | URA |
 | NEXUS | 2026-03-29 | 2,000 | URA |
-| #NULO# | 2026-03-28 | 2,080 | URA |
+| Paraná Pesquisas | 2026-03-28 | 2,080 | URA |
 | 100 CIDADES | 2026-03-27 | 1,200 | URA |
 | GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT | 2026-03-27 | 2,000 | presencial |
 | AFFARE INSTITUTE | 2026-03-26 | 1,500 | URA |
@@ -312,32 +191,32 @@
 | INSTITUTO FRANCA DE PESQUISA PESQUISA E ASSESSORIA | 2026-03-18 | 1,224 | URA |
 | INSTITUTO PHOENIX & ASSOCIADOS | 2026-03-12 | 1,055 | URA |
 | BOAS IDEIAS, ESTRATEGIA E INTELIGENCIA DIGITAL. | 2026-03-10 | 1,500 | URA |
-| #NULO# | 2026-03-09 | 2,004 | URA |
+| Quaest | 2026-03-09 | 2,004 | URA |
 | RANKING BRASIL INTELIGENCIA | 2026-03-06 | 2,000 | URA |
 | 100 CIDADES | 2026-03-06 | 2,000 | URA |
-| #NULO# | 2026-03-05 | 2,004 | URA |
-| #NULO# | 2026-03-03 | 9,000 | URA |
+| Datafolha | 2026-03-05 | 2,004 | URA |
+| Vetor | 2026-03-03 | 9,000 | URA |
 | REAL TIME BIG DATA | 2026-03-02 | 2,000 | URA |
 | INSTITUTO PHOENIX & ASSOCIADOS | 2026-02-28 | 1,200 | URA |
-| #NULO# | 2026-02-25 | 2,080 | URA |
+| Paraná Pesquisas | 2026-02-25 | 2,080 | URA |
 | DATATRENDS | 2026-02-24 | 1,200 | URA |
 | ATLASINTEL | 2026-02-24 | 5,000 | URA |
-| #NULO# | 2026-02-09 | 2,004 | URA |
-| #NULO# | 2026-02-09 | 2,004 | URA |
+| Colectta | 2026-02-09 | 2,004 | URA |
+| Quaest | 2026-02-09 | 2,004 | URA |
 | 100 CIDADES | 2026-02-07 | 2,000 | URA |
 | REAL TIME BIG DATA | 2026-02-07 | 2,000 | URA |
 | INSTITUTO DE PESQUISA MULTIPLA | 2026-02-07 | 1,200 | URA |
 | BOAS IDEIAS, ESTRATEGIA E INTELIGENCIA DIGITAL. | 2026-02-02 | 1,500 | URA |
 | JOTA JORNALISMO | 2026-01-31 | 5,000 | URA |
 | GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT | 2026-01-30 | 2,000 | presencial |
-| #NULO# | 2026-01-28 | 2,080 | URA |
+| Paraná Pesquisas | 2026-01-28 | 2,080 | URA |
 | ANOVA INSTITUTO DE PESQUISA | 2026-01-26 | 2,000 | URA |
 | 100 CIDADES | 2026-01-23 | 1,200 | URA |
 | DATA POVO CONSULTORIA | 2026-01-21 | 1,300 | URA |
 | ATLASINTEL | 2026-01-20 | 5,000 | URA |
 | 100 CIDADES | 2026-01-19 | 2,000 | URA |
 | BOAS IDEIAS, ESTRATEGIA E INTELIGENCIA DIGITAL. | 2026-01-12 | 2,000 | URA |
-| #NULO# | 2026-01-11 | 2,004 | URA |
+| Quaest | 2026-01-11 | 2,004 | URA |
 
 ---
-*Gerado em 27/05/2026 14:51*
+*Gerado em 27/05/2026 15:20*
