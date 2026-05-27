@@ -4,7 +4,7 @@
 |---|---|
 | Total registradas (cargo=Presidente) | **308** |
 | Aprovadas para o agregador | **84** |
-| Novas detectadas hoje | **0** |
+| Novas detectadas hoje | **12** |
 
 ## 📊 Classificação
 
@@ -15,7 +15,211 @@
 | ⚠️ Inconclusiva | 25 | n>1.000 + sem padrão nos campos |
 | ❌ Excluída — amostra | 57 | n ≤ 1.000 |
 
-## ✅ Nenhuma pesquisa nova hoje
+## 🆕 Novas pesquisas detectadas
+
+### ❌ VERITA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR040702026` |
+| Registro TSE | 2026-05-26 |
+| Campo | 2026-05-27 → 2026-05-31 (4 dias) |
+| Divulgação | 2026-06-01 |
+| Amostra | 2,020 entrevistados |
+| Custo | R$ 155,540 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2020) |
+| flag_nacional_explicito | ❌ |
+| flag_estadual_explicito | ✅ sim |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `2_EXCLUIDA_ESTADUAL` |
+| **usa_no_agregador** | ❌ **não** |
+
+### ❌ VERITA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR098982026` |
+| Registro TSE | 2026-05-26 |
+| Campo | 2026-05-27 → 2026-05-31 (4 dias) |
+| Divulgação | 2026-06-01 |
+| Amostra | 1,525 entrevistados |
+| Custo | R$ 117,425 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1525) |
+| flag_nacional_explicito | ❌ |
+| flag_estadual_explicito | ✅ sim |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `2_EXCLUIDA_ESTADUAL` |
+| **usa_no_agregador** | ❌ **não** |
+
+### ❌ VERITA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR021802026` |
+| Registro TSE | 2026-05-26 |
+| Campo | 2026-05-27 → 2026-05-31 (4 dias) |
+| Divulgação | 2026-06-01 |
+| Amostra | 1,525 entrevistados |
+| Custo | R$ 117,425 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1525) |
+| flag_nacional_explicito | ❌ |
+| flag_estadual_explicito | ✅ sim |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `2_EXCLUIDA_ESTADUAL` |
+| **usa_no_agregador** | ❌ **não** |
+
+### ✅ REAL TIME BIG DATA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR058642026` |
+| Registro TSE | 2026-05-26 |
+| Campo | 2026-05-29 → 2026-05-30 (1 dias) |
+| Divulgação | 2026-06-01 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 80,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ AGORASEI PESQUISA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR056712026` |
+| Registro TSE | 2026-05-26 |
+| Campo | 2026-05-28 → 2026-05-31 (3 dias) |
+| Divulgação | 2026-06-01 |
+| Amostra | 1,500 entrevistados |
+| Custo | R$ 30,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1500) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ❌ VERITA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR054992026` |
+| Registro TSE | 2026-05-26 |
+| Campo | 2026-05-27 → 2026-05-31 (4 dias) |
+| Divulgação | 2026-06-01 |
+| Amostra | 1,220 entrevistados |
+| Custo | R$ 93,940 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1220) |
+| flag_nacional_explicito | ❌ |
+| flag_estadual_explicito | ✅ sim |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `2_EXCLUIDA_ESTADUAL` |
+| **usa_no_agregador** | ❌ **não** |
+
+### ❌ VERITA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR004002026` |
+| Registro TSE | 2026-05-26 |
+| Campo | 2026-05-27 → 2026-05-31 (4 dias) |
+| Divulgação | 2026-06-01 |
+| Amostra | 1,525 entrevistados |
+| Custo | R$ 117,425 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1525) |
+| flag_nacional_explicito | ❌ |
+| flag_estadual_explicito | ✅ sim |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `2_EXCLUIDA_ESTADUAL` |
+| **usa_no_agregador** | ❌ **não** |
+
+### ❌ VERITA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR063602026` |
+| Registro TSE | 2026-05-26 |
+| Campo | 2026-05-27 → 2026-05-31 (4 dias) |
+| Divulgação | 2026-06-01 |
+| Amostra | 1,030 entrevistados |
+| Custo | R$ 79,310 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1030) |
+| flag_nacional_explicito | ❌ |
+| flag_estadual_explicito | ✅ sim |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `2_EXCLUIDA_ESTADUAL` |
+| **usa_no_agregador** | ❌ **não** |
+
+### ❌ VERITA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR054032026` |
+| Registro TSE | 2026-05-26 |
+| Campo | 2026-05-27 → 2026-05-31 (4 dias) |
+| Divulgação | 2026-06-01 |
+| Amostra | 2,030 entrevistados |
+| Custo | R$ 156,310 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2030) |
+| flag_nacional_explicito | ❌ |
+| flag_estadual_explicito | ✅ sim |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `2_EXCLUIDA_ESTADUAL` |
+| **usa_no_agregador** | ❌ **não** |
+
+### ❌ VERITA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR003452026` |
+| Registro TSE | 2026-05-26 |
+| Campo | 2026-05-27 → 2026-05-31 (4 dias) |
+| Divulgação | 2026-06-01 |
+| Amostra | 1,220 entrevistados |
+| Custo | R$ 93,940 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1220) |
+| flag_nacional_explicito | ❌ |
+| flag_estadual_explicito | ✅ sim |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `2_EXCLUIDA_ESTADUAL` |
+| **usa_no_agregador** | ❌ **não** |
+
+### ❌ VERITA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR002092026` |
+| Registro TSE | 2026-05-26 |
+| Campo | 2026-05-27 → 2026-05-31 (4 dias) |
+| Divulgação | 2026-06-01 |
+| Amostra | 1,220 entrevistados |
+| Custo | R$ 93,940 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1220) |
+| flag_nacional_explicito | ❌ |
+| flag_estadual_explicito | ✅ sim |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `2_EXCLUIDA_ESTADUAL` |
+| **usa_no_agregador** | ❌ **não** |
+
+### ✅ Vox Brasil
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR095392026` |
+| Registro TSE | 2026-05-25 |
+| Campo | 2026-05-27 → 2026-05-29 (2 dias) |
+| Divulgação | 2026-05-31 |
+| Amostra | 2,100 entrevistados |
+| Custo | R$ 50,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2100) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
 
 ## 📅 Divulgações futuras
 
@@ -219,4 +423,4 @@
 | Quaest | 2026-01-11 | 2,004 | URA |
 
 ---
-*Gerado em 27/05/2026 15:20*
+*Gerado em 27/05/2026 15:24*
