@@ -51,7 +51,23 @@ logging.basicConfig(level=logging.INFO,
 log = logging.getLogger(__name__)
 
 
-# ─── Padrões de texto ─────────────────────────────────────────────────────────
+# ─── Mapeamento razão social → nome fantasia ──────────────────────────────────
+# Usado para resolver os casos onde NM_EMPRESA_FANTASIA é #NULO#
+# Baseado na análise do CSV do TSE em 25/05/2026
+
+RAZAO_PARA_FANTASIA = {
+    "QUAEST PESQUISAS, CONSULTORIA E PROJETOS LTDA.":                  "Quaest",
+    "DATAFOLHA INSTITUTO DE PESQUISAS LTDA.":                          "Datafolha",
+    "INSTITUTO PARANA DE PESQUISAS E ANALISE DE CONSUMIDOR LTDA":      "Paraná Pesquisas",
+    "MDA-PESQUISA DE OPINIAO PUBLICA E CONSULT. ESTATIST. LTDA - EPP": "MDA",
+    "IPESPE INST DE PESQUISAS SOCIAIS POLITICAS E ECONOMICAS":          "Ipespe",
+    "VETOR ARROW INSTITUTO DE PESQUISA E OPINIAO LTDA":                "Vetor",
+    "INSTITUTO VOX BRASIL OPINIAO E PESQUISAS LTDA":                   "Vox Brasil",
+    "COLECTTA INSTITUTO DE PESQUISA E ESTATISTICA LTDA":               "Colectta",
+    "INSTITUTO DE PESQUISAS PERFIL LTDA":                              "Perfil Pesquisas",
+    "DATA TEMPO LIMITADA":                                             "Data Tempo",
+    "DATAPRESS INSTITUTO DE PESQUISA, COMUNICACAO E PUBLICIDADE LTDA": "Datapress",
+}
 #
 # Analisados nos campos:
 #   DS_METODOLOGIA_PESQUISA + DS_PLANO_AMOSTRAL + DS_DADO_MUNICIPIO
@@ -213,7 +229,16 @@ def enriquecer(df: pd.DataFrame) -> pd.DataFrame:
         pd.to_datetime(df["DT_INICIO_PESQUISA"])
     ).dt.days
 
-    df["instituto"] = df["NM_EMPRESA_FANTASIA"].fillna(df["NM_EMPRESA"]).str.strip()
+    # Resolver nomes: preferir fantasia; se #NULO# ou vazio, usar razão social mapeada
+    def _resolver_nome(row):
+        fantasia = str(row["NM_EMPRESA_FANTASIA"]).strip()
+        razao    = str(row["NM_EMPRESA"]).strip()
+        if fantasia and fantasia not in ("#NULO#", "nan", ""):
+            return fantasia
+        # Tentar mapear razão social para nome fantasia conhecido
+        return RAZAO_PARA_FANTASIA.get(razao, razao)
+
+    df["instituto"] = df.apply(_resolver_nome, axis=1)
 
     m = df["DS_METODOLOGIA_PESQUISA"].fillna("").str.lower()
     df["metodologia"] = "presencial"
@@ -397,6 +422,36 @@ def gerar_relatorio(df: pd.DataFrame, novas: pd.DataFrame) -> None:
             L.append(f"| {r['instituto']} | {r['campo_inicio']} → {r['campo_fim']} | {r['divulgacao']} | {int(r['QT_ENTREVISTADO']):,} | `{r['status']}` |")
         L.append("")
 
+    # Custos por instituto
+    L.append("## 💰 Custo das pesquisas por instituto (acumulado 2026)")
+    L.append("")
+    L.append("| Instituto | Pesquisas | Custo total (R$) | Custo médio (R$) | R$/entrevistado |")
+    L.append("|-----------|-----------|-----------------|-----------------|----------------|")
+    custos = (
+        df[df["custo_reais"].notna() & (df["custo_reais"] > 0)]
+        .drop_duplicates("NR_PROTOCOLO_REGISTRO")
+        .groupby("instituto")
+        .agg(
+            pesquisas   =("NR_PROTOCOLO_REGISTRO", "count"),
+            custo_total =("custo_reais", "sum"),
+            custo_medio =("custo_reais", "mean"),
+            amostra_med =("QT_ENTREVISTADO", "mean"),
+        )
+        .sort_values("custo_total", ascending=False)
+    )
+    total_geral = 0
+    for inst, row in custos.iterrows():
+        cpp = row["custo_medio"] / row["amostra_med"] if row["amostra_med"] > 0 else 0
+        total_geral += row["custo_total"]
+        L.append(
+            f"| {inst} | {int(row['pesquisas'])} "
+            f"| {row['custo_total']:,.0f} "
+            f"| {row['custo_medio']:,.0f} "
+            f"| {cpp:.2f} |"
+        )
+    L.append(f"| **TOTAL** | **{int(custos['pesquisas'].sum())}** | **{total_geral:,.0f}** | — | — |")
+    L.append("")
+
     # Aprovadas
     L.append("## ✅ Pesquisas aprovadas para o agregador")
     L.append("")
@@ -432,13 +487,15 @@ def gerar_alerta_txt(novas: pd.DataFrame) -> None:
         "",
     ]
     for _, r in novas.sort_values("tse_registro", ascending=False).iterrows():
-        n = int(r["QT_ENTREVISTADO"]) if pd.notna(r["QT_ENTREVISTADO"]) else 0
+        n     = int(r["QT_ENTREVISTADO"]) if pd.notna(r["QT_ENTREVISTADO"]) else 0
+        custo = f"R$ {r['custo_reais']:,.0f}".replace(",", ".") if pd.notna(r["custo_reais"]) else "não informado"
         linhas += [
             f"INSTITUTO:   {r['instituto']}",
             f"PROTOCOLO:   {r['NR_PROTOCOLO_REGISTRO']}",
             f"CAMPO:       {r['campo_inicio']} até {r['campo_fim']}",
             f"DIVULGAÇÃO:  {r['divulgacao']}",
             f"AMOSTRA:     {n:,} entrevistados".replace(",", "."),
+            f"CUSTO:       {custo}",
             f"METODOLOGIA: {r['metodologia']}",
             f"STATUS:      {r['status']}",
             f"AGREGADOR:   {'SIM' if r['usa_no_agregador'] else 'NÃO — verificar manualmente'}",
