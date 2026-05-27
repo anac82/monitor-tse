@@ -27,6 +27,8 @@ jobs:
         run: pip install pandas requests
 
       - name: Rodar monitor
+        env:
+          AGREGADOR_TOKEN: ${{ secrets.AGREGADOR_TOKEN }}
         id: monitor
         run: |
           python scripts/monitor.py
