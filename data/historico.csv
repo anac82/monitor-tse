@@ -1,6 +1,5 @@
 NR_PROTOCOLO_REGISTRO,instituto,tse_registro,campo_inicio,campo_fim,campo_dias,divulgacao,QT_ENTREVISTADO,custo_reais,metodologia,pesquisa_propria,status,usa_no_agregador,flag_amostra_ok,flag_nacional_explicito,flag_estadual_explicito,flag_instituto_conhecido
 BR018782026,INSTITUTO SETA DE PESQUISA,2026-05-25,2026-05-26,2026-05-28,2,2026-05-31,1500,15000.0,URA,True,2_EXCLUIDA_ESTADUAL,False,True,False,True,False
-BR048822026,PoderData,2026-05-23,2026-05-25,2026-05-28,3,2026-05-29,2400,103715.0,URA,True,1_APROVADA,True,True,True,False,True
 BR087942026,Vox Brasil,2026-05-24,2026-05-26,2026-05-28,2,2026-05-30,1480,50000.0,URA,True,2_EXCLUIDA_ESTADUAL,False,True,False,True,True
 BR048462026,Anova,2026-05-24,2026-05-25,2026-05-27,2,2026-05-30,2000,20000.0,URA,False,2_EXCLUIDA_ESTADUAL,False,True,False,True,False
 BR065942026,AtlasIntel,2026-05-22,2026-05-22,2026-05-27,5,2026-05-28,1000,60000.0,URA,False,4_EXCLUIDA_AMOSTRA (n=1000),False,False,False,True,True
