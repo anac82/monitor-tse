@@ -4,7 +4,7 @@
 |---|---|
 | Total registradas (cargo=Presidente) | **308** |
 | Aprovadas para o agregador | **84** |
-| Novas detectadas hoje | **1** |
+| Novas detectadas hoje | **84** |
 
 ## 📊 Classificação
 
@@ -16,6 +16,57 @@
 | ❌ Excluída — amostra | 57 | n ≤ 1.000 |
 
 ## 🆕 Novas pesquisas detectadas
+
+### ✅ AGORASEI PESQUISA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR056712026` |
+| Registro TSE | 2026-05-26 |
+| Campo | 2026-05-28 → 2026-05-31 (3 dias) |
+| Divulgação | 2026-06-01 |
+| Amostra | 1,500 entrevistados |
+| Custo | R$ 30,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1500) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ REAL TIME BIG DATA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR058642026` |
+| Registro TSE | 2026-05-26 |
+| Campo | 2026-05-29 → 2026-05-30 (1 dias) |
+| Divulgação | 2026-06-01 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 80,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ Vox Brasil
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR095392026` |
+| Registro TSE | 2026-05-25 |
+| Campo | 2026-05-27 → 2026-05-29 (2 dias) |
+| Divulgação | 2026-05-31 |
+| Amostra | 2,100 entrevistados |
+| Custo | R$ 50,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2100) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
 
 ### ✅ PODERDATA
 | Campo | Valor |
@@ -30,6 +81,1366 @@
 | flag_amostra_ok | ✅ (n=2400) |
 | flag_nacional_explicito | ✅ |
 | flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ ITEM PESQUISAS TECNICAS
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR042722026` |
+| Registro TSE | 2026-05-23 |
+| Campo | 2026-05-18 → 2026-05-22 (4 dias) |
+| Divulgação | 2026-05-29 |
+| Amostra | 1,250 entrevistados |
+| Custo | R$ 15,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1250) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ MEDIA - INTELIGENCIA EM PESQUISA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR079092026` |
+| Registro TSE | 2026-05-23 |
+| Campo | 2026-05-21 → 2026-05-27 (6 dias) |
+| Divulgação | 2026-05-29 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 20,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ BOAS IDEIAS, ESTRATEGIA E INTELIGENCIA DIGITAL.
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR029182026` |
+| Registro TSE | 2026-05-22 |
+| Campo | 2026-05-23 → 2026-05-27 (4 dias) |
+| Divulgação | 2026-05-28 |
+| Amostra | 1,500 entrevistados |
+| Custo | R$ 27,600 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1500) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ JOTA JORNALISMO
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR029972026` |
+| Registro TSE | 2026-05-21 |
+| Campo | 2026-04-20 → 2026-05-23 (33 dias) |
+| Divulgação | 2026-05-27 |
+| Amostra | 6,000 entrevistados |
+| Custo | R$ 110,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=6000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ INDEXA PESQUISAS
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR021542026` |
+| Registro TSE | 2026-05-21 |
+| Campo | 2026-05-22 → 2026-05-24 (2 dias) |
+| Divulgação | 2026-05-27 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 164,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ NEXUS
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR041932026` |
+| Registro TSE | 2026-05-19 |
+| Campo | 2026-05-22 → 2026-05-24 (2 dias) |
+| Divulgação | 2026-05-25 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 164,889 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ INSTITUTO DE PESQUISA MULTIPLA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR004322026` |
+| Registro TSE | 2026-05-18 |
+| Campo | 2026-05-16 → 2026-05-20 (4 dias) |
+| Divulgação | 2026-05-24 |
+| Amostra | 1,070 entrevistados |
+| Custo | R$ 20,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1070) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ Vetor
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR093012026` |
+| Registro TSE | 2026-05-18 |
+| Campo | 2026-05-15 → 2026-05-19 (4 dias) |
+| Divulgação | 2026-05-21 |
+| Amostra | 9,000 entrevistados |
+| Custo | R$ 180,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=9000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR079712026` |
+| Registro TSE | 2026-05-16 |
+| Campo | 2026-05-19 → 2026-05-22 (3 dias) |
+| Divulgação | 2026-05-22 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 20,000 |
+| Metodologia | presencial |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ Datafolha
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR074892026` |
+| Registro TSE | 2026-05-16 |
+| Campo | 2026-05-20 → 2026-05-22 (2 dias) |
+| Divulgação | 2026-05-22 |
+| Amostra | 2,004 entrevistados |
+| Custo | R$ 307,642 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2004) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ 100 CIDADES
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR065292026` |
+| Registro TSE | 2026-05-15 |
+| Campo | 2026-05-15 → 2026-05-21 (6 dias) |
+| Divulgação | 2026-05-21 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 160,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ Vox Brasil
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR024162026` |
+| Registro TSE | 2026-05-14 |
+| Campo | 2026-05-17 → 2026-05-19 (2 dias) |
+| Divulgação | 2026-05-20 |
+| Amostra | 2,100 entrevistados |
+| Custo | R$ 50,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2100) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ ATLASINTEL
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR069392026` |
+| Registro TSE | 2026-05-13 |
+| Campo | 2026-05-13 → 2026-05-18 (5 dias) |
+| Divulgação | 2026-05-19 |
+| Amostra | 5,000 entrevistados |
+| Custo | R$ 75,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=5000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ QUALITTA EMPREENDIMENTOS
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR067132026` |
+| Registro TSE | 2026-05-10 |
+| Campo | 2026-05-12 → 2026-05-14 (2 dias) |
+| Divulgação | 2026-05-16 |
+| Amostra | 1,200 entrevistados |
+| Custo | R$ 22,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1200) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ Datafolha
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR002902026` |
+| Registro TSE | 2026-05-09 |
+| Campo | 2026-05-12 → 2026-05-14 (2 dias) |
+| Divulgação | 2026-05-15 |
+| Amostra | 2,004 entrevistados |
+| Custo | R$ 307,642 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2004) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR033692026` |
+| Registro TSE | 2026-05-08 |
+| Campo | 2026-05-07 → 2026-05-11 (4 dias) |
+| Divulgação | 2026-05-14 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 20,000 |
+| Metodologia | presencial |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ IPSENSUS PESQUISAS
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR006952026` |
+| Registro TSE | 2026-05-08 |
+| Campo | 2026-05-09 → 2026-05-13 (4 dias) |
+| Divulgação | 2026-05-14 |
+| Amostra | 1,500 entrevistados |
+| Custo | R$ 10,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1500) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ Vox Brasil
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR024232026` |
+| Registro TSE | 2026-05-08 |
+| Campo | 2026-05-09 → 2026-05-12 (3 dias) |
+| Divulgação | 2026-05-14 |
+| Amostra | 2,100 entrevistados |
+| Custo | R$ 50,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2100) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ Quaest
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR035982026` |
+| Registro TSE | 2026-05-07 |
+| Campo | 2026-05-08 → 2026-05-11 (3 dias) |
+| Divulgação | 2026-05-13 |
+| Amostra | 2,004 entrevistados |
+| Custo | R$ 433,256 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2004) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ 100 CIDADES
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR036782026` |
+| Registro TSE | 2026-05-05 |
+| Campo | 2026-05-04 → 2026-05-08 (4 dias) |
+| Divulgação | 2026-05-11 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 160,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ Vox Brasil
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR020522026` |
+| Registro TSE | 2026-05-05 |
+| Campo | 2026-05-08 → 2026-05-09 (1 dias) |
+| Divulgação | 2026-05-11 |
+| Amostra | 1,200 entrevistados |
+| Custo | R$ 15,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1200) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ INSTITUTO PHOENIX & ASSOCIADOS
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR031452026` |
+| Registro TSE | 2026-05-01 |
+| Campo | 2026-05-03 → 2026-05-06 (3 dias) |
+| Divulgação | 2026-05-07 |
+| Amostra | 1,203 entrevistados |
+| Custo | R$ 12,900 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1203) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ 100 CIDADES
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR005762026` |
+| Registro TSE | 2026-04-30 |
+| Campo | 2026-04-27 → 2026-04-29 (2 dias) |
+| Divulgação | 2026-05-06 |
+| Amostra | 1,200 entrevistados |
+| Custo | R$ 96,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1200) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ DATATRENDS
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR083372026` |
+| Registro TSE | 2026-04-30 |
+| Campo | 2026-04-30 → 2026-05-03 (3 dias) |
+| Divulgação | 2026-05-06 |
+| Amostra | 4,000 entrevistados |
+| Custo | R$ 50,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=4000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ BOAS IDEIAS, ESTRATEGIA E INTELIGENCIA DIGITAL.
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR053562026` |
+| Registro TSE | 2026-04-30 |
+| Campo | 2026-05-01 → 2026-05-05 (4 dias) |
+| Divulgação | 2026-05-06 |
+| Amostra | 1,500 entrevistados |
+| Custo | R$ 27,600 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1500) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ REAL TIME BIG DATA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR036272026` |
+| Registro TSE | 2026-04-29 |
+| Campo | 2026-05-02 → 2026-05-04 (2 dias) |
+| Divulgação | 2026-05-05 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 80,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ DELTA AGENCIA DE PESQUISA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR013812026` |
+| Registro TSE | 2026-04-25 |
+| Campo | 2026-04-25 → 2026-04-30 (5 dias) |
+| Divulgação | 2026-05-01 |
+| Amostra | 1,006 entrevistados |
+| Custo | R$ 33,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1006) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ ATLASINTEL
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR079922026` |
+| Registro TSE | 2026-04-22 |
+| Campo | 2026-04-22 → 2026-04-27 (5 dias) |
+| Divulgação | 2026-04-28 |
+| Amostra | 5,000 entrevistados |
+| Custo | R$ 75,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=5000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ EXATUS CONSULTORIA E PESQUISA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR019492026` |
+| Registro TSE | 2026-04-22 |
+| Campo | 2026-04-14 → 2026-04-17 (3 dias) |
+| Divulgação | 2026-04-28 |
+| Amostra | 1,518 entrevistados |
+| Custo | R$ 30,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1518) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ NEXUS
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR010752026` |
+| Registro TSE | 2026-04-21 |
+| Campo | 2026-04-24 → 2026-04-26 (2 dias) |
+| Divulgação | 2026-04-27 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 164,889 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ DATATRENDS
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR071042026` |
+| Registro TSE | 2026-04-20 |
+| Campo | 2026-04-22 → 2026-04-23 (1 dias) |
+| Divulgação | 2026-04-26 |
+| Amostra | 1,200 entrevistados |
+| Custo | R$ 15,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1200) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ Perfil Pesquisas
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR089052026` |
+| Registro TSE | 2026-04-11 |
+| Campo | 2026-04-13 → 2026-04-16 (3 dias) |
+| Divulgação | 2026-04-17 |
+| Amostra | 1,800 entrevistados |
+| Custo | R$ 40,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1800) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ Quaest
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR092852026` |
+| Registro TSE | 2026-04-09 |
+| Campo | 2026-04-10 → 2026-04-13 (3 dias) |
+| Divulgação | 2026-04-15 |
+| Amostra | 2,004 entrevistados |
+| Custo | R$ 465,820 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2004) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ MDA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR028472026` |
+| Registro TSE | 2026-04-08 |
+| Campo | 2026-04-08 → 2026-04-12 (4 dias) |
+| Divulgação | 2026-04-14 |
+| Amostra | 2,002 entrevistados |
+| Custo | R$ 230,038 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2002) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ 100 CIDADES
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR082822026` |
+| Registro TSE | 2026-04-08 |
+| Campo | 2026-04-07 → 2026-04-11 (4 dias) |
+| Divulgação | 2026-04-14 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 160,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ INSTITUTO GP1 DE PESQUISA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR007392026` |
+| Registro TSE | 2026-04-07 |
+| Campo | 2026-04-07 → 2026-04-10 (3 dias) |
+| Divulgação | 2026-04-13 |
+| Amostra | 1,137 entrevistados |
+| Custo | R$ 60,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1137) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ AFFARE INSTITUTE
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR089712026` |
+| Registro TSE | 2026-04-06 |
+| Campo | 2026-04-07 → 2026-04-11 (4 dias) |
+| Divulgação | 2026-04-12 |
+| Amostra | 1,500 entrevistados |
+| Custo | R$ 22,500 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1500) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ Datafolha
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR037702026` |
+| Registro TSE | 2026-04-05 |
+| Campo | 2026-04-07 → 2026-04-09 (2 dias) |
+| Divulgação | 2026-04-11 |
+| Amostra | 2,004 entrevistados |
+| Custo | R$ 307,642 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2004) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ INSTITUTO FRANCA DE PESQUISA PESQUISA E ASSESSORIA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR044202026` |
+| Registro TSE | 2026-04-03 |
+| Campo | 2026-04-06 → 2026-04-08 (2 dias) |
+| Divulgação | 2026-04-08 |
+| Amostra | 1,200 entrevistados |
+| Custo | R$ 15,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1200) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ BOAS IDEIAS, ESTRATEGIA E INTELIGENCIA DIGITAL.
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR006052026` |
+| Registro TSE | 2026-04-02 |
+| Campo | 2026-04-03 → 2026-04-07 (4 dias) |
+| Divulgação | 2026-04-08 |
+| Amostra | 1,500 entrevistados |
+| Custo | R$ 27,600 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1500) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ VERITA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR024762026` |
+| Registro TSE | 2026-03-29 |
+| Campo | 2026-03-13 → 2026-04-04 (22 dias) |
+| Divulgação | 2026-04-04 |
+| Amostra | 40,500 entrevistados |
+| Custo | R$ 3,118,500 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=40500) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ 100 CIDADES
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR050672026` |
+| Registro TSE | 2026-03-26 |
+| Campo | 2026-03-24 → 2026-03-27 (3 dias) |
+| Divulgação | 2026-04-01 |
+| Amostra | 1,200 entrevistados |
+| Custo | R$ 96,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1200) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ ATLASINTEL
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR060582026` |
+| Registro TSE | 2026-03-25 |
+| Campo | 2026-03-16 → 2026-03-23 (7 dias) |
+| Divulgação | 2026-03-31 |
+| Amostra | 4,200 entrevistados |
+| Custo | R$ 75,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=4200) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ NEXUS
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR078752026` |
+| Registro TSE | 2026-03-24 |
+| Campo | 2026-03-27 → 2026-03-29 (2 dias) |
+| Divulgação | 2026-03-30 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 164,889 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ Paraná Pesquisas
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR008732026` |
+| Registro TSE | 2026-03-24 |
+| Campo | 2026-03-25 → 2026-03-28 (3 dias) |
+| Divulgação | 2026-03-30 |
+| Amostra | 2,080 entrevistados |
+| Custo | R$ 50,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2080) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ JOTA JORNALISMO
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR093712026` |
+| Registro TSE | 2026-03-24 |
+| Campo | 2026-03-01 → 2026-03-30 (29 dias) |
+| Divulgação | 2026-03-30 |
+| Amostra | 5,000 entrevistados |
+| Custo | R$ 110,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=5000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ AFFARE INSTITUTE
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR087132026` |
+| Registro TSE | 2026-03-22 |
+| Campo | 2026-03-23 → 2026-03-26 (3 dias) |
+| Divulgação | 2026-03-28 |
+| Amostra | 1,500 entrevistados |
+| Custo | R$ 22,500 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1500) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ QUALITTA EMPREENDIMENTOS
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR054052026` |
+| Registro TSE | 2026-03-21 |
+| Campo | 2026-03-22 → 2026-03-25 (3 dias) |
+| Divulgação | 2026-03-27 |
+| Amostra | 1,200 entrevistados |
+| Custo | R$ 18,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1200) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR028462026` |
+| Registro TSE | 2026-03-19 |
+| Campo | 2026-03-21 → 2026-03-27 (6 dias) |
+| Divulgação | 2026-03-25 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 22,500 |
+| Metodologia | presencial |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ ATLASINTEL
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR042272026` |
+| Registro TSE | 2026-03-18 |
+| Campo | 2026-03-18 → 2026-03-23 (5 dias) |
+| Divulgação | 2026-03-24 |
+| Amostra | 5,000 entrevistados |
+| Custo | R$ 75,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=5000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ DELTA AGENCIA DE PESQUISA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR070462026` |
+| Registro TSE | 2026-03-16 |
+| Campo | 2026-03-16 → 2026-03-21 (5 dias) |
+| Divulgação | 2026-03-22 |
+| Amostra | 1,006 entrevistados |
+| Custo | R$ 26,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1006) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ INSTITUTO FRANCA DE PESQUISA PESQUISA E ASSESSORIA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR019052026` |
+| Registro TSE | 2026-03-12 |
+| Campo | 2026-03-16 → 2026-03-18 (2 dias) |
+| Divulgação | 2026-03-18 |
+| Amostra | 1,224 entrevistados |
+| Custo | R$ 10,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1224) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ INSTITUTO PHOENIX & ASSOCIADOS
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR040312026` |
+| Registro TSE | 2026-03-06 |
+| Campo | 2026-03-08 → 2026-03-12 (4 dias) |
+| Divulgação | 2026-03-12 |
+| Amostra | 1,055 entrevistados |
+| Custo | R$ 8,500 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1055) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ Quaest
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR058092026` |
+| Registro TSE | 2026-03-05 |
+| Campo | 2026-03-06 → 2026-03-09 (3 dias) |
+| Divulgação | 2026-03-11 |
+| Amostra | 2,004 entrevistados |
+| Custo | R$ 465,820 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2004) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ 100 CIDADES
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR066072026` |
+| Registro TSE | 2026-03-05 |
+| Campo | 2026-03-02 → 2026-03-06 (4 dias) |
+| Divulgação | 2026-03-11 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 160,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ BOAS IDEIAS, ESTRATEGIA E INTELIGENCIA DIGITAL.
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR003862026` |
+| Registro TSE | 2026-03-05 |
+| Campo | 2026-03-06 → 2026-03-10 (4 dias) |
+| Divulgação | 2026-03-11 |
+| Amostra | 1,500 entrevistados |
+| Custo | R$ 27,600 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1500) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ RANKING BRASIL INTELIGENCIA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR053592026` |
+| Registro TSE | 2026-02-28 |
+| Campo | 2026-03-01 → 2026-03-06 (5 dias) |
+| Divulgação | 2026-03-06 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 20,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ Datafolha
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR037152026` |
+| Registro TSE | 2026-02-27 |
+| Campo | 2026-03-03 → 2026-03-05 (2 dias) |
+| Divulgação | 2026-03-05 |
+| Amostra | 2,004 entrevistados |
+| Custo | R$ 307,642 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2004) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ Vetor
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR037422026` |
+| Registro TSE | 2026-02-27 |
+| Campo | 2026-02-27 → 2026-03-03 (4 dias) |
+| Divulgação | 2026-03-05 |
+| Amostra | 9,000 entrevistados |
+| Custo | R$ 180,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=9000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ REAL TIME BIG DATA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR093532026` |
+| Registro TSE | 2026-02-25 |
+| Campo | 2026-02-28 → 2026-03-02 (2 dias) |
+| Divulgação | 2026-03-03 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 80,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ INSTITUTO PHOENIX & ASSOCIADOS
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR029212026` |
+| Registro TSE | 2026-02-25 |
+| Campo | 2026-02-25 → 2026-02-28 (3 dias) |
+| Divulgação | 2026-03-03 |
+| Amostra | 1,200 entrevistados |
+| Custo | R$ 8,250 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1200) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ DATATRENDS
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR067802026` |
+| Registro TSE | 2026-02-22 |
+| Campo | 2026-02-23 → 2026-02-24 (1 dias) |
+| Divulgação | 2026-02-28 |
+| Amostra | 1,200 entrevistados |
+| Custo | R$ 15,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1200) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ Paraná Pesquisas
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR079742026` |
+| Registro TSE | 2026-02-21 |
+| Campo | 2026-02-22 → 2026-02-25 (3 dias) |
+| Divulgação | 2026-02-27 |
+| Amostra | 2,080 entrevistados |
+| Custo | R$ 50,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2080) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ ATLASINTEL
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR076002026` |
+| Registro TSE | 2026-02-19 |
+| Campo | 2026-02-19 → 2026-02-24 (5 dias) |
+| Divulgação | 2026-02-25 |
+| Amostra | 5,000 entrevistados |
+| Custo | R$ 75,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=5000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ INSTITUTO DE PESQUISA MULTIPLA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR030572026` |
+| Registro TSE | 2026-02-06 |
+| Campo | 2026-02-03 → 2026-02-07 (4 dias) |
+| Divulgação | 2026-02-12 |
+| Amostra | 1,200 entrevistados |
+| Custo | R$ 15,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1200) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ Quaest
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR002492026` |
+| Registro TSE | 2026-02-05 |
+| Campo | 2026-02-05 → 2026-02-09 (4 dias) |
+| Divulgação | 2026-02-11 |
+| Amostra | 2,004 entrevistados |
+| Custo | R$ 465,820 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2004) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ Colectta
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR042912026` |
+| Registro TSE | 2026-02-05 |
+| Campo | 2026-02-05 → 2026-02-09 (4 dias) |
+| Divulgação | 2026-02-11 |
+| Amostra | 2,004 entrevistados |
+| Custo | R$ 92,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2004) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ 100 CIDADES
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR022762026` |
+| Registro TSE | 2026-02-04 |
+| Campo | 2026-02-03 → 2026-02-07 (4 dias) |
+| Divulgação | 2026-02-10 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 160,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ REAL TIME BIG DATA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR064282026` |
+| Registro TSE | 2026-02-03 |
+| Campo | 2026-02-06 → 2026-02-07 (1 dias) |
+| Divulgação | 2026-02-09 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 80,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR045192026` |
+| Registro TSE | 2026-01-29 |
+| Campo | 2026-01-26 → 2026-01-30 (4 dias) |
+| Divulgação | 2026-02-04 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 20,000 |
+| Metodologia | presencial |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ BOAS IDEIAS, ESTRATEGIA E INTELIGENCIA DIGITAL.
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR084252026` |
+| Registro TSE | 2026-01-29 |
+| Campo | 2026-01-30 → 2026-02-02 (3 dias) |
+| Divulgação | 2026-02-04 |
+| Amostra | 1,500 entrevistados |
+| Custo | R$ 27,600 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1500) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ DATA POVO CONSULTORIA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR091232026` |
+| Registro TSE | 2026-01-28 |
+| Campo | 2026-01-18 → 2026-01-21 (3 dias) |
+| Divulgação | 2026-02-03 |
+| Amostra | 1,300 entrevistados |
+| Custo | R$ 68,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1300) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ JOTA JORNALISMO
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR037962026` |
+| Registro TSE | 2026-01-26 |
+| Campo | 2026-01-05 → 2026-01-31 (26 dias) |
+| Divulgação | 2026-02-01 |
+| Amostra | 5,000 entrevistados |
+| Custo | R$ 110,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=5000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ Paraná Pesquisas
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR082542026` |
+| Registro TSE | 2026-01-23 |
+| Campo | 2026-01-25 → 2026-01-28 (3 dias) |
+| Divulgação | 2026-01-29 |
+| Amostra | 2,080 entrevistados |
+| Custo | R$ 50,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2080) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ ANOVA INSTITUTO DE PESQUISA
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR040542026` |
+| Registro TSE | 2026-01-22 |
+| Campo | 2026-01-24 → 2026-01-26 (2 dias) |
+| Divulgação | 2026-01-28 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 2,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ⚠️ novo |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ 100 CIDADES
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR030242026` |
+| Registro TSE | 2026-01-21 |
+| Campo | 2026-01-20 → 2026-01-23 (3 dias) |
+| Divulgação | 2026-01-27 |
+| Amostra | 1,200 entrevistados |
+| Custo | R$ 96,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=1200) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ 100 CIDADES
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR082332026` |
+| Registro TSE | 2026-01-16 |
+| Campo | 2026-01-15 → 2026-01-19 (4 dias) |
+| Divulgação | 2026-01-22 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 160,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ ATLASINTEL
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR028042026` |
+| Registro TSE | 2026-01-15 |
+| Campo | 2026-01-15 → 2026-01-20 (5 dias) |
+| Divulgação | 2026-01-21 |
+| Amostra | 5,000 entrevistados |
+| Custo | R$ 75,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=5000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ Quaest
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR008352026` |
+| Registro TSE | 2026-01-08 |
+| Campo | 2026-01-08 → 2026-01-11 (3 dias) |
+| Divulgação | 2026-01-14 |
+| Amostra | 2,004 entrevistados |
+| Custo | R$ 465,820 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2004) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ❌ |
+| flag_instituto_conhecido | ✅ |
+| **status** | `1_APROVADA` |
+| **usa_no_agregador** | ✅ **sim** |
+
+### ✅ BOAS IDEIAS, ESTRATEGIA E INTELIGENCIA DIGITAL.
+| Campo | Valor |
+|---|---|
+| Protocolo | `BR067312026` |
+| Registro TSE | 2026-01-07 |
+| Campo | 2026-01-08 → 2026-01-12 (4 dias) |
+| Divulgação | 2026-01-13 |
+| Amostra | 2,000 entrevistados |
+| Custo | R$ 46,000 |
+| Metodologia | URA |
+| flag_amostra_ok | ✅ (n=2000) |
+| flag_nacional_explicito | ✅ |
+| flag_estadual_explicito | ✅ sim (mas nacional prevalece) |
 | flag_instituto_conhecido | ✅ |
 | **status** | `1_APROVADA` |
 | **usa_no_agregador** | ✅ **sim** |
@@ -236,4 +1647,4 @@
 | Quaest | 2026-01-11 | 2,004 | URA |
 
 ---
-*Gerado em 27/05/2026 15:59*
+*Gerado em 27/05/2026 16:04*
