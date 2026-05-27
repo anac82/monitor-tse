@@ -574,35 +574,55 @@ def main() -> int:
 
     salvar_snapshot(df)
 
-    # ── Detectar pesquisas novas no TSE (não vistas antes) ────────────────────
-    vistos = protocolos_vistos()
-    novas  = detectar_novas(df, vistos)
+    # ── 1. Atualizar historico.csv (registro de tudo que o TSE tem) ───────────
     atualizar_historico(df)
 
-    # ── Detectar pesquisas pendentes: aprovadas mas sem dados no agregador ────
-    # Uma pesquisa é "pendente" quando:
-    #   1. Está aprovada (usa_no_agregador=True)
-    #   2. NÃO está no pesquisas_manuais.csv do agregador
-    # Isso cobre tanto pesquisas novas quanto pesquisas antigas nunca coletadas.
+    # ── 2. Buscar o que já foi coletado no agregador ──────────────────────────
     protos_agregador = protocolos_no_agregador()
 
-    todas_aprovadas = df[df["usa_no_agregador"]].drop_duplicates("NR_PROTOCOLO_REGISTRO")
-    pendentes = todas_aprovadas[
-        ~todas_aprovadas["NR_PROTOCOLO_REGISTRO"].astype(str).isin(protos_agregador)
-    ].copy()
+    # ── 3. Pendentes = aprovadas no TSE que NÃO estão no agregador ───────────
+    #
+    # Esta é a pergunta certa:
+    #   "Quais pesquisas o TSE aprovou mas ainda não têm dados no agregador?"
+    #
+    # Não importa se já estava no historico.csv ou não —
+    # o que importa é se os dados já foram coletados.
 
-    log.info(f"  Pesquisas aprovadas no TSE: {len(todas_aprovadas)}")
-    log.info(f"  Pendentes (aprovadas mas sem dados no agregador): {len(pendentes)}")
+    todas_aprovadas = (
+        df[df["usa_no_agregador"]]
+        .drop_duplicates("NR_PROTOCOLO_REGISTRO")
+        .copy()
+    )
 
-    # ── Salvar JSON: novas no TSE + pendentes no agregador ────────────────────
-    # O JSON contém as pendentes (o que o workflow usa para Issue e pendentes.md)
+    if protos_agregador:
+        pendentes = todas_aprovadas[
+            ~todas_aprovadas["NR_PROTOCOLO_REGISTRO"]
+            .astype(str)
+            .isin(protos_agregador)
+        ].copy()
+    else:
+        # Sem acesso ao agregador — usar historico como fallback:
+        # considera "pendente" apenas o que é NOVO no TSE (não estava no histórico anterior)
+        log.warning("  Sem acesso ao agregador — usando histórico como fallback")
+        vistos    = protocolos_vistos()
+        pendentes = todas_aprovadas[
+            ~todas_aprovadas["NR_PROTOCOLO_REGISTRO"]
+            .astype(str)
+            .isin(vistos)
+        ].copy()
+
+    log.info(f"  Aprovadas no TSE:    {len(todas_aprovadas)}")
+    log.info(f"  Já no agregador:     {len(protos_agregador)}")
+    log.info(f"  Pendentes de coleta: {len(pendentes)}")
+
+    # ── 4. Gerar saídas ───────────────────────────────────────────────────────
     salvar_json(pendentes)
-    gerar_relatorio(df, novas)
+    gerar_relatorio(df, pendentes)
     gerar_alerta_txt(pendentes)
 
     log.info("========== Concluído ==========")
 
-    # exit 1 se há pendentes (dispara Issue e atualização do agregador)
+    # exit 1 dispara Issue + pesquisas_pendentes.md no workflow
     return 1 if len(pendentes) > 0 else 0
 
 
