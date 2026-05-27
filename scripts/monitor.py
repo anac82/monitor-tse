@@ -111,6 +111,7 @@ PADROES_ESTADUAL = [
 
 # Institutos que já publicaram pesquisas nacionais (informativo)
 INSTITUTOS_CONHECIDOS = {
+    # Nomes fantasia
     "QUAEST", "DATAFOLHA", "ATLASINTEL", "ATLAS INTEL",
     "PARANA PESQUISAS", "REAL TIME BIG DATA",
     "FUTURA", "FUTURA INTELIGENCIA",
@@ -118,6 +119,10 @@ INSTITUTOS_CONHECIDOS = {
     "IDEIA", "BOAS IDEIAS", "PODERDATA", "PODER DATA",
     "100 CIDADES", "JOTA", "JOTA JORNALISMO",
     "DATA POVO", "INDEXA",
+    # Razões sociais dos que costumam aparecer como #NULO#
+    "QUAEST PESQUISAS", "DATAFOLHA INSTITUTO",
+    "INSTITUTO PARANA DE PESQUISAS",
+    "MDA-PESQUISA", "IPESPE",
 }
 
 
@@ -172,8 +177,11 @@ def calcular_flags(df: pd.DataFrame) -> pd.DataFrame:
     df["flag_estadual_explicito"] = f3
 
     # ── Instituto conhecido (informativo) ─────────────────────────────────────
-    inst_up = df["NM_EMPRESA_FANTASIA"].fillna(df["NM_EMPRESA"]).str.upper().fillna("")
-    df["flag_instituto_conhecido"] = inst_up.apply(
+    # Usa tanto fantasia quanto razão social para não perder os #NULO#
+    inst_fantasia = df["NM_EMPRESA_FANTASIA"].fillna("").str.upper()
+    inst_razao    = df["NM_EMPRESA"].fillna("").str.upper()
+    inst_combined = inst_fantasia + " " + inst_razao
+    df["flag_instituto_conhecido"] = inst_combined.apply(
         lambda x: any(k in x for k in INSTITUTOS_CONHECIDOS)
     )
 
