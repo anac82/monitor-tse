@@ -1,7 +1,18 @@
 ============================================================
-MONITOR TSE — 2026-05-30
+MONITOR TSE — 2026-05-31
 86 NOVA(S) PESQUISA(S) PRESIDENCIAL(IS)
 ============================================================
+
+INSTITUTO:   Vox Brasil
+PROTOCOLO:   BR080162026
+CAMPO:       2026-06-01 até 2026-06-03
+DIVULGAÇÃO:  2026-06-05
+AMOSTRA:     2.100 entrevistados
+CUSTO:       R$ 50.000
+METODOLOGIA: URA
+STATUS:      1_APROVADA
+AGREGADOR:   SIM
+------------------------------------------------------------
 
 INSTITUTO:   EXATUS CONSULTORIA E PESQUISA
 PROTOCOLO:   BR070452026
@@ -42,17 +53,6 @@ CAMPO:       2026-05-28 até 2026-05-31
 DIVULGAÇÃO:  2026-06-01
 AMOSTRA:     1.500 entrevistados
 CUSTO:       R$ 30.000
-METODOLOGIA: URA
-STATUS:      1_APROVADA
-AGREGADOR:   SIM
-------------------------------------------------------------
-
-INSTITUTO:   Vox Brasil
-PROTOCOLO:   BR095392026
-CAMPO:       2026-05-27 até 2026-05-29
-DIVULGAÇÃO:  2026-05-31
-AMOSTRA:     2.100 entrevistados
-CUSTO:       R$ 50.000
 METODOLOGIA: URA
 STATUS:      1_APROVADA
 AGREGADOR:   SIM
@@ -157,17 +157,6 @@ STATUS:      1_APROVADA
 AGREGADOR:   SIM
 ------------------------------------------------------------
 
-INSTITUTO:   GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT
-PROTOCOLO:   BR079712026
-CAMPO:       2026-05-19 até 2026-05-22
-DIVULGAÇÃO:  2026-05-22
-AMOSTRA:     2.000 entrevistados
-CUSTO:       R$ 20.000
-METODOLOGIA: presencial
-STATUS:      1_APROVADA
-AGREGADOR:   SIM
-------------------------------------------------------------
-
 INSTITUTO:   Datafolha
 PROTOCOLO:   BR074892026
 CAMPO:       2026-05-20 até 2026-05-22
@@ -175,6 +164,17 @@ DIVULGAÇÃO:  2026-05-22
 AMOSTRA:     2.004 entrevistados
 CUSTO:       R$ 307.642
 METODOLOGIA: URA
+STATUS:      1_APROVADA
+AGREGADOR:   SIM
+------------------------------------------------------------
+
+INSTITUTO:   GRUPO GERP GERP MERCADO GERP OPINIAO GERPAUDIT
+PROTOCOLO:   BR079712026
+CAMPO:       2026-05-19 até 2026-05-22
+DIVULGAÇÃO:  2026-05-22
+AMOSTRA:     2.000 entrevistados
+CUSTO:       R$ 20.000
+METODOLOGIA: presencial
 STATUS:      1_APROVADA
 AGREGADOR:   SIM
 ------------------------------------------------------------
@@ -245,23 +245,23 @@ STATUS:      1_APROVADA
 AGREGADOR:   SIM
 ------------------------------------------------------------
 
-INSTITUTO:   IPSENSUS PESQUISAS
-PROTOCOLO:   BR006952026
-CAMPO:       2026-05-09 até 2026-05-13
-DIVULGAÇÃO:  2026-05-14
-AMOSTRA:     1.500 entrevistados
-CUSTO:       R$ 10.000
-METODOLOGIA: URA
-STATUS:      1_APROVADA
-AGREGADOR:   SIM
-------------------------------------------------------------
-
 INSTITUTO:   Vox Brasil
 PROTOCOLO:   BR024232026
 CAMPO:       2026-05-09 até 2026-05-12
 DIVULGAÇÃO:  2026-05-14
 AMOSTRA:     2.100 entrevistados
 CUSTO:       R$ 50.000
+METODOLOGIA: URA
+STATUS:      1_APROVADA
+AGREGADOR:   SIM
+------------------------------------------------------------
+
+INSTITUTO:   IPSENSUS PESQUISAS
+PROTOCOLO:   BR006952026
+CAMPO:       2026-05-09 até 2026-05-13
+DIVULGAÇÃO:  2026-05-14
+AMOSTRA:     1.500 entrevistados
+CUSTO:       R$ 10.000
 METODOLOGIA: URA
 STATUS:      1_APROVADA
 AGREGADOR:   SIM
@@ -366,23 +366,23 @@ STATUS:      1_APROVADA
 AGREGADOR:   SIM
 ------------------------------------------------------------
 
-INSTITUTO:   EXATUS CONSULTORIA E PESQUISA
-PROTOCOLO:   BR019492026
-CAMPO:       2026-04-14 até 2026-04-17
-DIVULGAÇÃO:  2026-04-28
-AMOSTRA:     1.518 entrevistados
-CUSTO:       R$ 30.000
-METODOLOGIA: URA
-STATUS:      1_APROVADA
-AGREGADOR:   SIM
-------------------------------------------------------------
-
 INSTITUTO:   ATLASINTEL
 PROTOCOLO:   BR079922026
 CAMPO:       2026-04-22 até 2026-04-27
 DIVULGAÇÃO:  2026-04-28
 AMOSTRA:     5.000 entrevistados
 CUSTO:       R$ 75.000
+METODOLOGIA: URA
+STATUS:      1_APROVADA
+AGREGADOR:   SIM
+------------------------------------------------------------
+
+INSTITUTO:   EXATUS CONSULTORIA E PESQUISA
+PROTOCOLO:   BR019492026
+CAMPO:       2026-04-14 até 2026-04-17
+DIVULGAÇÃO:  2026-04-28
+AMOSTRA:     1.518 entrevistados
+CUSTO:       R$ 30.000
 METODOLOGIA: URA
 STATUS:      1_APROVADA
 AGREGADOR:   SIM
@@ -542,23 +542,23 @@ STATUS:      1_APROVADA
 AGREGADOR:   SIM
 ------------------------------------------------------------
 
-INSTITUTO:   NEXUS
-PROTOCOLO:   BR078752026
-CAMPO:       2026-03-27 até 2026-03-29
-DIVULGAÇÃO:  2026-03-30
-AMOSTRA:     2.000 entrevistados
-CUSTO:       R$ 164.889
-METODOLOGIA: URA
-STATUS:      1_APROVADA
-AGREGADOR:   SIM
-------------------------------------------------------------
-
 INSTITUTO:   JOTA JORNALISMO
 PROTOCOLO:   BR093712026
 CAMPO:       2026-03-01 até 2026-03-30
 DIVULGAÇÃO:  2026-03-30
 AMOSTRA:     5.000 entrevistados
 CUSTO:       R$ 110.000
+METODOLOGIA: URA
+STATUS:      1_APROVADA
+AGREGADOR:   SIM
+------------------------------------------------------------
+
+INSTITUTO:   NEXUS
+PROTOCOLO:   BR078752026
+CAMPO:       2026-03-27 até 2026-03-29
+DIVULGAÇÃO:  2026-03-30
+AMOSTRA:     2.000 entrevistados
+CUSTO:       R$ 164.889
 METODOLOGIA: URA
 STATUS:      1_APROVADA
 AGREGADOR:   SIM
@@ -652,23 +652,23 @@ STATUS:      1_APROVADA
 AGREGADOR:   SIM
 ------------------------------------------------------------
 
-INSTITUTO:   100 CIDADES
-PROTOCOLO:   BR066072026
-CAMPO:       2026-03-02 até 2026-03-06
-DIVULGAÇÃO:  2026-03-11
-AMOSTRA:     2.000 entrevistados
-CUSTO:       R$ 160.000
-METODOLOGIA: URA
-STATUS:      1_APROVADA
-AGREGADOR:   SIM
-------------------------------------------------------------
-
 INSTITUTO:   Quaest
 PROTOCOLO:   BR058092026
 CAMPO:       2026-03-06 até 2026-03-09
 DIVULGAÇÃO:  2026-03-11
 AMOSTRA:     2.004 entrevistados
 CUSTO:       R$ 465.820
+METODOLOGIA: URA
+STATUS:      1_APROVADA
+AGREGADOR:   SIM
+------------------------------------------------------------
+
+INSTITUTO:   100 CIDADES
+PROTOCOLO:   BR066072026
+CAMPO:       2026-03-02 até 2026-03-06
+DIVULGAÇÃO:  2026-03-11
+AMOSTRA:     2.000 entrevistados
+CUSTO:       R$ 160.000
 METODOLOGIA: URA
 STATUS:      1_APROVADA
 AGREGADOR:   SIM
@@ -696,17 +696,6 @@ STATUS:      1_APROVADA
 AGREGADOR:   SIM
 ------------------------------------------------------------
 
-INSTITUTO:   Datafolha
-PROTOCOLO:   BR037152026
-CAMPO:       2026-03-03 até 2026-03-05
-DIVULGAÇÃO:  2026-03-05
-AMOSTRA:     2.004 entrevistados
-CUSTO:       R$ 307.642
-METODOLOGIA: URA
-STATUS:      1_APROVADA
-AGREGADOR:   SIM
-------------------------------------------------------------
-
 INSTITUTO:   Vetor
 PROTOCOLO:   BR037422026
 CAMPO:       2026-02-27 até 2026-03-03
@@ -718,12 +707,12 @@ STATUS:      1_APROVADA
 AGREGADOR:   SIM
 ------------------------------------------------------------
 
-INSTITUTO:   REAL TIME BIG DATA
-PROTOCOLO:   BR093532026
-CAMPO:       2026-02-28 até 2026-03-02
-DIVULGAÇÃO:  2026-03-03
-AMOSTRA:     2.000 entrevistados
-CUSTO:       R$ 80.000
+INSTITUTO:   Datafolha
+PROTOCOLO:   BR037152026
+CAMPO:       2026-03-03 até 2026-03-05
+DIVULGAÇÃO:  2026-03-05
+AMOSTRA:     2.004 entrevistados
+CUSTO:       R$ 307.642
 METODOLOGIA: URA
 STATUS:      1_APROVADA
 AGREGADOR:   SIM
@@ -735,6 +724,17 @@ CAMPO:       2026-02-25 até 2026-02-28
 DIVULGAÇÃO:  2026-03-03
 AMOSTRA:     1.200 entrevistados
 CUSTO:       R$ 8.250
+METODOLOGIA: URA
+STATUS:      1_APROVADA
+AGREGADOR:   SIM
+------------------------------------------------------------
+
+INSTITUTO:   REAL TIME BIG DATA
+PROTOCOLO:   BR093532026
+CAMPO:       2026-02-28 até 2026-03-02
+DIVULGAÇÃO:  2026-03-03
+AMOSTRA:     2.000 entrevistados
+CUSTO:       R$ 80.000
 METODOLOGIA: URA
 STATUS:      1_APROVADA
 AGREGADOR:   SIM
